@@ -1,0 +1,1035 @@
+buf_red = 0xbb5b9010
+fwd_inv = 0x95a652a0
+spliting red sub band
+fwd lifting step only
+w = 0x100 buf_red wptr = 0xbb5b9010 alt =  0xbb5f9010 fwd_inverse =  0x95a652a0 fwd_inverse =  0x1 
+starting red dwt
+ip = 0xbb5b9010 tp = 0xbb5f9010 
+in lifting 
+ip = 0xbb5b9010 op = 0xbb5f9010 opb = 0xbb619010
+ap = 226 b = 226 cp = 225 d = 225
+ip = 0xbb5b9410 op = 0xbb5f9014 opb = 0xbb619014
+ap = 224 b = 224 cp = 224 d = 224
+ip = 0xbb5b9810 op = 0xbb5f9018 opb = 0xbb619018
+ap = 226 b = 226 cp = 226 d = 226
+ip = 0xbb5b9c10 op = 0xbb5f901c opb = 0xbb61901c
+ap = 227 b = 227 cp = 227 d = 227
+ip = 0xbb5ba010 op = 0xbb5f9020 opb = 0xbb619020
+ap = 226 b = 226 cp = 226 d = 226
+ip = 0xbb5ba410 op = 0xbb5f9024 opb = 0xbb619024
+ap = 226 b = 226 cp = 225 d = 225
+ip = 0xbb5ba810 op = 0xbb5f9028 opb = 0xbb619028
+ap = 224 b = 224 cp = 225 d = 225
+ip = 0xbb5bac10 op = 0xbb5f902c opb = 0xbb61902c
+ap = 222 b = 222 cp = 223 d = 225
+ip = 0xbb5bb010 op = 0xbb5f9030 opb = 0xbb619030
+ap = 221 b = 221 cp = 223 d = 224
+ip = 0xbb5bb410 op = 0xbb5f9034 opb = 0xbb619034
+ap = 222 b = 222 cp = 223 d = 223
+ip = 0xbb5bb810 op = 0xbb5f9038 opb = 0xbb619038
+ap = 223 b = 223 cp = 223 d = 223
+ip = 0xbb5bbc10 op = 0xbb5f903c opb = 0xbb61903c
+ap = 222 b = 222 cp = 223 d = 224
+ip = 0xbb5bc010 op = 0xbb5f9040 opb = 0xbb619040
+ap = 221 b = 221 cp = 222 d = 222
+ip = 0xbb5bc410 op = 0xbb5f9044 opb = 0xbb619044
+ap = 222 b = 222 cp = 223 d = 223
+ip = 0xbb5bc810 op = 0xbb5f9048 opb = 0xbb619048
+ap = 221 b = 221 cp = 221 d = 222
+ip = 0xbb5bcc10 op = 0xbb5f904c opb = 0xbb61904c
+ap = 222 b = 222 cp = 222 d = 222
+ip = 0xbb5bd010 op = 0xbb5f9050 opb = 0xbb619050
+ap = 223 b = 223 cp = 223 d = 223
+ip = 0xbb5bd410 op = 0xbb5f9054 opb = 0xbb619054
+ap = 225 b = 224 cp = 223 d = 224
+ip = 0xbb5bd810 op = 0xbb5f9058 opb = 0xbb619058
+ap = 227 b = 226 cp = 226 d = 227
+ip = 0xbb5bdc10 op = 0xbb5f905c opb = 0xbb61905c
+ap = 230 b = 230 cp = 229 d = 230
+ip = 0xbb5be010 op = 0xbb5f9060 opb = 0xbb619060
+ap = 231 b = 231 cp = 231 d = 232
+ip = 0xbb5be410 op = 0xbb5f9064 opb = 0xbb619064
+ap = 232 b = 232 cp = 232 d = 234
+ip = 0xbb5be810 op = 0xbb5f9068 opb = 0xbb619068
+ap = 233 b = 234 cp = 234 d = 235
+ip = 0xbb5bec10 op = 0xbb5f906c opb = 0xbb61906c
+ap = 234 b = 234 cp = 235 d = 236
+ip = 0xbb5bf010 op = 0xbb5f9070 opb = 0xbb619070
+ap = 236 b = 236 cp = 236 d = 236
+ip = 0xbb5bf410 op = 0xbb5f9074 opb = 0xbb619074
+ap = 235 b = 235 cp = 236 d = 236
+ip = 0xbb5bf810 op = 0xbb5f9078 opb = 0xbb619078
+ap = 233 b = 233 cp = 234 d = 234
+ip = 0xbb5bfc10 op = 0xbb5f907c opb = 0xbb61907c
+ap = 230 b = 230 cp = 230 d = 229
+ip = 0xbb5c0010 op = 0xbb5f9080 opb = 0xbb619080
+ap = 223 b = 223 cp = 223 d = 221
+ip = 0xbb5c0410 op = 0xbb5f9084 opb = 0xbb619084
+ap = 215 b = 215 cp = 214 d = 212
+ip = 0xbb5c0810 op = 0xbb5f9088 opb = 0xbb619088
+ap = 201 b = 201 cp = 199 d = 199
+ip = 0xbb5c0c10 op = 0xbb5f908c opb = 0xbb61908c
+ap = 182 b = 182 cp = 182 d = 183
+ip = 0xbb5c1010 op = 0xbb5f9090 opb = 0xbb619090
+ap = 167 b = 167 cp = 168 d = 169
+ip = 0xbb5c1410 op = 0xbb5f9094 opb = 0xbb619094
+ap = 157 b = 157 cp = 158 d = 160
+ip = 0xbb5c1810 op = 0xbb5f9098 opb = 0xbb619098
+ap = 157 b = 157 cp = 158 d = 158
+ip = 0xbb5c1c10 op = 0xbb5f909c opb = 0xbb61909c
+ap = 162 b = 162 cp = 163 d = 162
+ip = 0xbb5c2010 op = 0xbb5f90a0 opb = 0xbb6190a0
+ap = 166 b = 166 cp = 166 d = 167
+ip = 0xbb5c2410 op = 0xbb5f90a4 opb = 0xbb6190a4
+ap = 169 b = 169 cp = 170 d = 171
+ip = 0xbb5c2810 op = 0xbb5f90a8 opb = 0xbb6190a8
+ap = 174 b = 174 cp = 174 d = 175
+ip = 0xbb5c2c10 op = 0xbb5f90ac opb = 0xbb6190ac
+ap = 177 b = 177 cp = 176 d = 176
+ip = 0xbb5c3010 op = 0xbb5f90b0 opb = 0xbb6190b0
+ap = 177 b = 177 cp = 177 d = 176
+ip = 0xbb5c3410 op = 0xbb5f90b4 opb = 0xbb6190b4
+ap = 177 b = 177 cp = 177 d = 177
+ip = 0xbb5c3810 op = 0xbb5f90b8 opb = 0xbb6190b8
+ap = 176 b = 175 cp = 175 d = 177
+ip = 0xbb5c3c10 op = 0xbb5f90bc opb = 0xbb6190bc
+ap = 176 b = 176 cp = 176 d = 176
+ip = 0xbb5c4010 op = 0xbb5f90c0 opb = 0xbb6190c0
+ap = 177 b = 177 cp = 177 d = 175
+ip = 0xbb5c4410 op = 0xbb5f90c4 opb = 0xbb6190c4
+ap = 178 b = 178 cp = 178 d = 176
+ip = 0xbb5c4810 op = 0xbb5f90c8 opb = 0xbb6190c8
+ap = 179 b = 179 cp = 178 d = 177
+ip = 0xbb5c4c10 op = 0xbb5f90cc opb = 0xbb6190cc
+ap = 179 b = 178 cp = 178 d = 178
+ip = 0xbb5c5010 op = 0xbb5f90d0 opb = 0xbb6190d0
+ap = 177 b = 177 cp = 178 d = 179
+ip = 0xbb5c5410 op = 0xbb5f90d4 opb = 0xbb6190d4
+ap = 176 b = 176 cp = 177 d = 178
+ip = 0xbb5c5810 op = 0xbb5f90d8 opb = 0xbb6190d8
+ap = 175 b = 175 cp = 176 d = 176
+ip = 0xbb5c5c10 op = 0xbb5f90dc opb = 0xbb6190dc
+ap = 179 b = 179 cp = 178 d = 179
+ip = 0xbb5c6010 op = 0xbb5f90e0 opb = 0xbb6190e0
+ap = 180 b = 180 cp = 180 d = 181
+ip = 0xbb5c6410 op = 0xbb5f90e4 opb = 0xbb6190e4
+ap = 183 b = 183 cp = 184 d = 184
+ip = 0xbb5c6810 op = 0xbb5f90e8 opb = 0xbb6190e8
+ap = 189 b = 189 cp = 188 d = 188
+ip = 0xbb5c6c10 op = 0xbb5f90ec opb = 0xbb6190ec
+ap = 193 b = 193 cp = 193 d = 192
+ip = 0xbb5c7010 op = 0xbb5f90f0 opb = 0xbb6190f0
+ap = 194 b = 194 cp = 195 d = 195
+ip = 0xbb5c7410 op = 0xbb5f90f4 opb = 0xbb6190f4
+ap = 194 b = 194 cp = 195 d = 196
+ip = 0xbb5c7810 op = 0xbb5f90f8 opb = 0xbb6190f8
+ap = 195 b = 195 cp = 196 d = 198
+ip = 0xbb5c7c10 op = 0xbb5f90fc opb = 0xbb6190fc
+ap = 197 b = 197 cp = 198 d = 200
+ip = 0xbb5c8010 op = 0xbb5f9100 opb = 0xbb619100
+ap = 201 b = 201 cp = 201 d = 201
+ip = 0xbb5c8410 op = 0xbb5f9104 opb = 0xbb619104
+ap = 202 b = 202 cp = 202 d = 201
+ip = 0xbb5c8810 op = 0xbb5f9108 opb = 0xbb619108
+ap = 203 b = 203 cp = 203 d = 203
+ip = 0xbb5c8c10 op = 0xbb5f910c opb = 0xbb61910c
+ap = 204 b = 203 cp = 203 d = 204
+ip = 0xbb5c9010 op = 0xbb5f9110 opb = 0xbb619110
+ap = 205 b = 205 cp = 206 d = 206
+ip = 0xbb5c9410 op = 0xbb5f9114 opb = 0xbb619114
+ap = 206 b = 205 cp = 205 d = 205
+ip = 0xbb5c9810 op = 0xbb5f9118 opb = 0xbb619118
+ap = 205 b = 204 cp = 203 d = 204
+ip = 0xbb5c9c10 op = 0xbb5f911c opb = 0xbb61911c
+ap = 203 b = 203 cp = 204 d = 205
+ip = 0xbb5ca010 op = 0xbb5f9120 opb = 0xbb619120
+ap = 203 b = 203 cp = 204 d = 205
+ip = 0xbb5ca410 op = 0xbb5f9124 opb = 0xbb619124
+ap = 204 b = 204 cp = 204 d = 204
+ip = 0xbb5ca810 op = 0xbb5f9128 opb = 0xbb619128
+ap = 205 b = 205 cp = 205 d = 205
+ip = 0xbb5cac10 op = 0xbb5f912c opb = 0xbb61912c
+ap = 205 b = 205 cp = 205 d = 205
+ip = 0xbb5cb010 op = 0xbb5f9130 opb = 0xbb619130
+ap = 205 b = 205 cp = 205 d = 206
+ip = 0xbb5cb410 op = 0xbb5f9134 opb = 0xbb619134
+ap = 203 b = 203 cp = 203 d = 207
+ip = 0xbb5cb810 op = 0xbb5f9138 opb = 0xbb619138
+ap = 202 b = 202 cp = 203 d = 206
+ip = 0xbb5cbc10 op = 0xbb5f913c opb = 0xbb61913c
+ap = 202 b = 202 cp = 203 d = 204
+ip = 0xbb5cc010 op = 0xbb5f9140 opb = 0xbb619140
+ap = 203 b = 203 cp = 204 d = 204
+ip = 0xbb5cc410 op = 0xbb5f9144 opb = 0xbb619144
+ap = 204 b = 204 cp = 204 d = 206
+ip = 0xbb5cc810 op = 0xbb5f9148 opb = 0xbb619148
+ap = 205 b = 206 cp = 206 d = 208
+ip = 0xbb5ccc10 op = 0xbb5f914c opb = 0xbb61914c
+ap = 206 b = 206 cp = 207 d = 207
+ip = 0xbb5cd010 op = 0xbb5f9150 opb = 0xbb619150
+ap = 208 b = 208 cp = 208 d = 208
+ip = 0xbb5cd410 op = 0xbb5f9154 opb = 0xbb619154
+ap = 208 b = 207 cp = 207 d = 208
+ip = 0xbb5cd810 op = 0xbb5f9158 opb = 0xbb619158
+ap = 207 b = 207 cp = 208 d = 207
+ip = 0xbb5cdc10 op = 0xbb5f915c opb = 0xbb61915c
+ap = 208 b = 208 cp = 209 d = 209
+ip = 0xbb5ce010 op = 0xbb5f9160 opb = 0xbb619160
+ap = 210 b = 210 cp = 210 d = 210
+ip = 0xbb5ce410 op = 0xbb5f9164 opb = 0xbb619164
+ap = 211 b = 211 cp = 211 d = 210
+ip = 0xbb5ce810 op = 0xbb5f9168 opb = 0xbb619168
+ap = 210 b = 210 cp = 211 d = 212
+ip = 0xbb5cec10 op = 0xbb5f916c opb = 0xbb61916c
+ap = 209 b = 209 cp = 210 d = 211
+ip = 0xbb5cf010 op = 0xbb5f9170 opb = 0xbb619170
+ap = 209 b = 209 cp = 209 d = 210
+ip = 0xbb5cf410 op = 0xbb5f9174 opb = 0xbb619174
+ap = 207 b = 207 cp = 208 d = 210
+ip = 0xbb5cf810 op = 0xbb5f9178 opb = 0xbb619178
+ap = 206 b = 206 cp = 208 d = 209
+ip = 0xbb5cfc10 op = 0xbb5f917c opb = 0xbb61917c
+ap = 207 b = 207 cp = 208 d = 209
+ip = 0xbb5d0010 op = 0xbb5f9180 opb = 0xbb619180
+ap = 208 b = 208 cp = 207 d = 208
+ip = 0xbb5d0410 op = 0xbb5f9184 opb = 0xbb619184
+ap = 207 b = 207 cp = 207 d = 207
+ip = 0xbb5d0810 op = 0xbb5f9188 opb = 0xbb619188
+ap = 205 b = 205 cp = 206 d = 206
+ip = 0xbb5d0c10 op = 0xbb5f918c opb = 0xbb61918c
+ap = 205 b = 205 cp = 207 d = 208
+ip = 0xbb5d1010 op = 0xbb5f9190 opb = 0xbb619190
+ap = 206 b = 206 cp = 207 d = 208
+ip = 0xbb5d1410 op = 0xbb5f9194 opb = 0xbb619194
+ap = 208 b = 208 cp = 207 d = 207
+ip = 0xbb5d1810 op = 0xbb5f9198 opb = 0xbb619198
+ap = 210 b = 209 cp = 208 d = 206
+ip = 0xbb5d1c10 op = 0xbb5f919c opb = 0xbb61919c
+ap = 209 b = 209 cp = 208 d = 206
+ip = 0xbb5d2010 op = 0xbb5f91a0 opb = 0xbb6191a0
+ap = 208 b = 208 cp = 207 d = 206
+ip = 0xbb5d2410 op = 0xbb5f91a4 opb = 0xbb6191a4
+ap = 207 b = 207 cp = 207 d = 207
+ip = 0xbb5d2810 op = 0xbb5f91a8 opb = 0xbb6191a8
+ap = 208 b = 208 cp = 207 d = 206
+ip = 0xbb5d2c10 op = 0xbb5f91ac opb = 0xbb6191ac
+ap = 202 b = 203 cp = 204 d = 204
+ip = 0xbb5d3010 op = 0xbb5f91b0 opb = 0xbb6191b0
+ap = 203 b = 203 cp = 204 d = 203
+ip = 0xbb5d3410 op = 0xbb5f91b4 opb = 0xbb6191b4
+ap = 205 b = 205 cp = 204 d = 205
+ip = 0xbb5d3810 op = 0xbb5f91b8 opb = 0xbb6191b8
+ap = 204 b = 204 cp = 203 d = 204
+ip = 0xbb5d3c10 op = 0xbb5f91bc opb = 0xbb6191bc
+ap = 202 b = 202 cp = 202 d = 203
+ip = 0xbb5d4010 op = 0xbb5f91c0 opb = 0xbb6191c0
+ap = 200 b = 200 cp = 202 d = 203
+ip = 0xbb5d4410 op = 0xbb5f91c4 opb = 0xbb6191c4
+ap = 203 b = 203 cp = 204 d = 203
+ip = 0xbb5d4810 op = 0xbb5f91c8 opb = 0xbb6191c8
+ap = 206 b = 206 cp = 206 d = 205
+ip = 0xbb5d4c10 op = 0xbb5f91cc opb = 0xbb6191cc
+ap = 205 b = 205 cp = 205 d = 205
+ip = 0xbb5d5010 op = 0xbb5f91d0 opb = 0xbb6191d0
+ap = 203 b = 203 cp = 203 d = 203
+ip = 0xbb5d5410 op = 0xbb5f91d4 opb = 0xbb6191d4
+ap = 202 b = 202 cp = 201 d = 203
+ip = 0xbb5d5810 op = 0xbb5f91d8 opb = 0xbb6191d8
+ap = 204 b = 204 cp = 203 d = 203
+ip = 0xbb5d5c10 op = 0xbb5f91dc opb = 0xbb6191dc
+ap = 205 b = 204 cp = 203 d = 203
+ip = 0xbb5d6010 op = 0xbb5f91e0 opb = 0xbb6191e0
+ap = 206 b = 205 cp = 203 d = 203
+ip = 0xbb5d6410 op = 0xbb5f91e4 opb = 0xbb6191e4
+ap = 207 b = 207 cp = 205 d = 205
+ip = 0xbb5d6810 op = 0xbb5f91e8 opb = 0xbb6191e8
+ap = 209 b = 208 cp = 207 d = 205
+ip = 0xbb5d6c10 op = 0xbb5f91ec opb = 0xbb6191ec
+ap = 208 b = 208 cp = 206 d = 205
+ip = 0xbb5d7010 op = 0xbb5f91f0 opb = 0xbb6191f0
+ap = 209 b = 208 cp = 207 d = 206
+ip = 0xbb5d7410 op = 0xbb5f91f4 opb = 0xbb6191f4
+ap = 209 b = 208 cp = 208 d = 208
+ip = 0xbb5d7810 op = 0xbb5f91f8 opb = 0xbb6191f8
+ap = 208 b = 208 cp = 207 d = 207
+ip = 0xbb5d7c10 op = 0xbb5f91fc opb = 0xbb6191fc
+ap = 208 b = 208 cp = 208 d = 206
+ip = 0xbb5d8010 op = 0xbb5f9200 opb = 0xbb619200
+ap = 208 b = 208 cp = 207 d = 207
+ip = 0xbb5d8410 op = 0xbb5f9204 opb = 0xbb619204
+ap = 207 b = 207 cp = 207 d = 207
+ip = 0xbb5d8810 op = 0xbb5f9208 opb = 0xbb619208
+ap = 205 b = 205 cp = 206 d = 208
+ip = 0xbb5d8c10 op = 0xbb5f920c opb = 0xbb61920c
+ap = 206 b = 206 cp = 206 d = 207
+ip = 0xbb5d9010 op = 0xbb5f9210 opb = 0xbb619210
+ap = 207 b = 207 cp = 207 d = 207
+ip = 0xbb5d9410 op = 0xbb5f9214 opb = 0xbb619214
+ap = 205 b = 205 cp = 206 d = 206
+ip = 0xbb5d9810 op = 0xbb5f9218 opb = 0xbb619218
+ap = 203 b = 203 cp = 203 d = 206
+ip = 0xbb5d9c10 op = 0xbb5f921c opb = 0xbb61921c
+ap = 202 b = 202 cp = 202 d = 205
+ip = 0xbb5da010 op = 0xbb5f9220 opb = 0xbb619220
+ap = 206 b = 206 cp = 205 d = 204
+ip = 0xbb5da410 op = 0xbb5f9224 opb = 0xbb619224
+ap = 204 b = 204 cp = 203 d = 201
+ip = 0xbb5da810 op = 0xbb5f9228 opb = 0xbb619228
+ap = 205 b = 205 cp = 204 d = 203
+ip = 0xbb5dac10 op = 0xbb5f922c opb = 0xbb61922c
+ap = 203 b = 203 cp = 203 d = 202
+ip = 0xbb5db010 op = 0xbb5f9230 opb = 0xbb619230
+ap = 201 b = 201 cp = 202 d = 203
+ip = 0xbb5db410 op = 0xbb5f9234 opb = 0xbb619234
+ap = 203 b = 203 cp = 203 d = 203
+ip = 0xbb5db810 op = 0xbb5f9238 opb = 0xbb619238
+ap = 202 b = 202 cp = 202 d = 201
+ip = 0xbb5dbc10 op = 0xbb5f923c opb = 0xbb61923c
+ap = 203 b = 203 cp = 202 d = 201
+ip = 0xbb5dc010 op = 0xbb5f9240 opb = 0xbb619240
+ap = 201 b = 201 cp = 201 d = 201
+ip = 0xbb5dc410 op = 0xbb5f9244 opb = 0xbb619244
+ap = 201 b = 200 cp = 200 d = 200
+ip = 0xbb5dc810 op = 0xbb5f9248 opb = 0xbb619248
+ap = 202 b = 202 cp = 201 d = 204
+ip = 0xbb5dcc10 op = 0xbb5f924c opb = 0xbb61924c
+ap = 202 b = 202 cp = 202 d = 204
+ip = 0xbb5dd010 op = 0xbb5f9250 opb = 0xbb619250
+ap = 201 b = 201 cp = 202 d = 202
+ip = 0xbb5dd410 op = 0xbb5f9254 opb = 0xbb619254
+ap = 204 b = 204 cp = 204 d = 204
+ip = 0xbb5dd810 op = 0xbb5f9258 opb = 0xbb619258
+ap = 203 b = 203 cp = 203 d = 203
+ip = 0xbb5ddc10 op = 0xbb5f925c opb = 0xbb61925c
+ap = 201 b = 201 cp = 201 d = 201
+ip = 0xbb5de010 op = 0xbb5f9260 opb = 0xbb619260
+ap = 199 b = 199 cp = 200 d = 201
+ip = 0xbb5de410 op = 0xbb5f9264 opb = 0xbb619264
+ap = 200 b = 200 cp = 200 d = 201
+ip = 0xbb5de810 op = 0xbb5f9268 opb = 0xbb619268
+ap = 200 b = 200 cp = 200 d = 200
+ip = 0xbb5dec10 op = 0xbb5f926c opb = 0xbb61926c
+ap = 196 b = 196 cp = 196 d = 198
+ip = 0xbb5df010 op = 0xbb5f9270 opb = 0xbb619270
+ap = 193 b = 193 cp = 194 d = 197
+ip = 0xbb5df410 op = 0xbb5f9274 opb = 0xbb619274
+ap = 193 b = 193 cp = 193 d = 193
+ip = 0xbb5df810 op = 0xbb5f9278 opb = 0xbb619278
+ap = 191 b = 191 cp = 191 d = 189
+ip = 0xbb5dfc10 op = 0xbb5f927c opb = 0xbb61927c
+ap = 187 b = 187 cp = 186 d = 187
+ip = 0xbb5e0010 op = 0xbb5f9280 opb = 0xbb619280
+ap = 181 b = 181 cp = 182 d = 184
+ip = 0xbb5e0410 op = 0xbb5f9284 opb = 0xbb619284
+ap = 177 b = 177 cp = 178 d = 181
+ip = 0xbb5e0810 op = 0xbb5f9288 opb = 0xbb619288
+ap = 175 b = 175 cp = 175 d = 178
+ip = 0xbb5e0c10 op = 0xbb5f928c opb = 0xbb61928c
+ap = 172 b = 172 cp = 172 d = 173
+ip = 0xbb5e1010 op = 0xbb5f9290 opb = 0xbb619290
+ap = 181 b = 181 cp = 179 d = 175
+ip = 0xbb5e1410 op = 0xbb5f9294 opb = 0xbb619294
+ap = 190 b = 190 cp = 189 d = 185
+ip = 0xbb5e1810 op = 0xbb5f9298 opb = 0xbb619298
+ap = 200 b = 199 cp = 198 d = 194
+ip = 0xbb5e1c10 op = 0xbb5f929c opb = 0xbb61929c
+ap = 208 b = 208 cp = 205 d = 201
+ip = 0xbb5e2010 op = 0xbb5f92a0 opb = 0xbb6192a0
+ap = 212 b = 211 cp = 211 d = 209
+ip = 0xbb5e2410 op = 0xbb5f92a4 opb = 0xbb6192a4
+ap = 214 b = 214 cp = 214 d = 212
+ip = 0xbb5e2810 op = 0xbb5f92a8 opb = 0xbb6192a8
+ap = 217 b = 217 cp = 217 d = 216
+ip = 0xbb5e2c10 op = 0xbb5f92ac opb = 0xbb6192ac
+ap = 220 b = 220 cp = 220 d = 218
+ip = 0xbb5e3010 op = 0xbb5f92b0 opb = 0xbb6192b0
+ap = 221 b = 221 cp = 221 d = 219
+ip = 0xbb5e3410 op = 0xbb5f92b4 opb = 0xbb6192b4
+ap = 221 b = 221 cp = 221 d = 221
+ip = 0xbb5e3810 op = 0xbb5f92b8 opb = 0xbb6192b8
+ap = 219 b = 219 cp = 220 d = 222
+ip = 0xbb5e3c10 op = 0xbb5f92bc opb = 0xbb6192bc
+ap = 220 b = 220 cp = 220 d = 221
+ip = 0xbb5e4010 op = 0xbb5f92c0 opb = 0xbb6192c0
+ap = 220 b = 220 cp = 220 d = 221
+ip = 0xbb5e4410 op = 0xbb5f92c4 opb = 0xbb6192c4
+ap = 220 b = 220 cp = 220 d = 221
+ip = 0xbb5e4810 op = 0xbb5f92c8 opb = 0xbb6192c8
+ap = 219 b = 219 cp = 220 d = 221
+ip = 0xbb5e4c10 op = 0xbb5f92cc opb = 0xbb6192cc
+ap = 220 b = 220 cp = 220 d = 220
+ip = 0xbb5e5010 op = 0xbb5f92d0 opb = 0xbb6192d0
+ap = 221 b = 220 cp = 220 d = 220
+ip = 0xbb5e5410 op = 0xbb5f92d4 opb = 0xbb6192d4
+ap = 220 b = 220 cp = 220 d = 221
+ip = 0xbb5e5810 op = 0xbb5f92d8 opb = 0xbb6192d8
+ap = 221 b = 221 cp = 221 d = 221
+ip = 0xbb5e5c10 op = 0xbb5f92dc opb = 0xbb6192dc
+ap = 221 b = 221 cp = 220 d = 221
+ip = 0xbb5e6010 op = 0xbb5f92e0 opb = 0xbb6192e0
+ap = 221 b = 221 cp = 221 d = 221
+ip = 0xbb5e6410 op = 0xbb5f92e4 opb = 0xbb6192e4
+ap = 222 b = 222 cp = 222 d = 222
+ip = 0xbb5e6810 op = 0xbb5f92e8 opb = 0xbb6192e8
+ap = 223 b = 223 cp = 223 d = 223
+ip = 0xbb5e6c10 op = 0xbb5f92ec opb = 0xbb6192ec
+ap = 221 b = 222 cp = 222 d = 223
+ip = 0xbb5e7010 op = 0xbb5f92f0 opb = 0xbb6192f0
+ap = 220 b = 220 cp = 222 d = 223
+ip = 0xbb5e7410 op = 0xbb5f92f4 opb = 0xbb6192f4
+ap = 222 b = 222 cp = 222 d = 223
+ip = 0xbb5e7810 op = 0xbb5f92f8 opb = 0xbb6192f8
+ap = 222 b = 222 cp = 222 d = 223
+ip = 0xbb5e7c10 op = 0xbb5f92fc opb = 0xbb6192fc
+ap = 222 b = 222 cp = 222 d = 223
+ip = 0xbb5e8010 op = 0xbb5f9300 opb = 0xbb619300
+ap = 222 b = 222 cp = 222 d = 223
+ip = 0xbb5e8410 op = 0xbb5f9304 opb = 0xbb619304
+ap = 221 b = 221 cp = 221 d = 222
+ip = 0xbb5e8810 op = 0xbb5f9308 opb = 0xbb619308
+ap = 221 b = 221 cp = 222 d = 222
+ip = 0xbb5e8c10 op = 0xbb5f930c opb = 0xbb61930c
+ap = 221 b = 221 cp = 221 d = 222
+ip = 0xbb5e9010 op = 0xbb5f9310 opb = 0xbb619310
+ap = 221 b = 221 cp = 221 d = 222
+ip = 0xbb5e9410 op = 0xbb5f9314 opb = 0xbb619314
+ap = 221 b = 221 cp = 221 d = 221
+ip = 0xbb5e9810 op = 0xbb5f9318 opb = 0xbb619318
+ap = 220 b = 220 cp = 220 d = 220
+ip = 0xbb5e9c10 op = 0xbb5f931c opb = 0xbb61931c
+ap = 221 b = 221 cp = 220 d = 220
+ip = 0xbb5ea010 op = 0xbb5f9320 opb = 0xbb619320
+ap = 221 b = 221 cp = 221 d = 220
+ip = 0xbb5ea410 op = 0xbb5f9324 opb = 0xbb619324
+ap = 220 b = 221 cp = 221 d = 220
+ip = 0xbb5ea810 op = 0xbb5f9328 opb = 0xbb619328
+ap = 221 b = 221 cp = 221 d = 221
+ip = 0xbb5eac10 op = 0xbb5f932c opb = 0xbb61932c
+ap = 220 b = 220 cp = 220 d = 220
+ip = 0xbb5eb010 op = 0xbb5f9330 opb = 0xbb619330
+ap = 219 b = 219 cp = 219 d = 218
+ip = 0xbb5eb410 op = 0xbb5f9334 opb = 0xbb619334
+ap = 228 b = 228 cp = 225 d = 221
+ip = 0xbb5eb810 op = 0xbb5f9338 opb = 0xbb619338
+ap = 238 b = 238 cp = 236 d = 231
+ip = 0xbb5ebc10 op = 0xbb5f933c opb = 0xbb61933c
+ap = 244 b = 244 cp = 243 d = 240
+ip = 0xbb5ec010 op = 0xbb5f9340 opb = 0xbb619340
+ap = 247 b = 247 cp = 247 d = 245
+ip = 0xbb5ec410 op = 0xbb5f9344 opb = 0xbb619344
+ap = 248 b = 248 cp = 249 d = 247
+ip = 0xbb5ec810 op = 0xbb5f9348 opb = 0xbb619348
+ap = 250 b = 250 cp = 250 d = 249
+ip = 0xbb5ecc10 op = 0xbb5f934c opb = 0xbb61934c
+ap = 251 b = 251 cp = 251 d = 251
+ip = 0xbb5ed010 op = 0xbb5f9350 opb = 0xbb619350
+ap = 250 b = 250 cp = 250 d = 251
+ip = 0xbb5ed410 op = 0xbb5f9354 opb = 0xbb619354
+ap = 242 b = 243 cp = 244 d = 248
+ip = 0xbb5ed810 op = 0xbb5f9358 opb = 0xbb619358
+ap = 224 b = 225 cp = 230 d = 239
+ip = 0xbb5edc10 op = 0xbb5f935c opb = 0xbb61935c
+ap = 197 b = 197 cp = 204 d = 219
+ip = 0xbb5ee010 op = 0xbb5f9360 opb = 0xbb619360
+ap = 172 b = 172 cp = 176 d = 189
+ip = 0xbb5ee410 op = 0xbb5f9364 opb = 0xbb619364
+ap = 165 b = 165 cp = 166 d = 169
+ip = 0xbb5ee810 op = 0xbb5f9368 opb = 0xbb619368
+ap = 169 b = 169 cp = 168 d = 167
+ip = 0xbb5eec10 op = 0xbb5f936c opb = 0xbb61936c
+ap = 175 b = 175 cp = 173 d = 172
+ip = 0xbb5ef010 op = 0xbb5f9370 opb = 0xbb619370
+ap = 181 b = 180 cp = 179 d = 177
+ip = 0xbb5ef410 op = 0xbb5f9374 opb = 0xbb619374
+ap = 184 b = 184 cp = 183 d = 183
+ip = 0xbb5ef810 op = 0xbb5f9378 opb = 0xbb619378
+ap = 184 b = 185 cp = 186 d = 187
+ip = 0xbb5efc10 op = 0xbb5f937c opb = 0xbb61937c
+ap = 187 b = 187 cp = 188 d = 188
+ip = 0xbb5f0010 op = 0xbb5f9380 opb = 0xbb619380
+ap = 186 b = 187 cp = 188 d = 187
+ip = 0xbb5f0410 op = 0xbb5f9384 opb = 0xbb619384
+ap = 187 b = 187 cp = 187 d = 187
+ip = 0xbb5f0810 op = 0xbb5f9388 opb = 0xbb619388
+ap = 188 b = 188 cp = 188 d = 188
+ip = 0xbb5f0c10 op = 0xbb5f938c opb = 0xbb61938c
+ap = 189 b = 189 cp = 189 d = 188
+ip = 0xbb5f1010 op = 0xbb5f9390 opb = 0xbb619390
+ap = 189 b = 189 cp = 189 d = 190
+ip = 0xbb5f1410 op = 0xbb5f9394 opb = 0xbb619394
+ap = 187 b = 188 cp = 188 d = 189
+ip = 0xbb5f1810 op = 0xbb5f9398 opb = 0xbb619398
+ap = 186 b = 186 cp = 186 d = 189
+ip = 0xbb5f1c10 op = 0xbb5f939c opb = 0xbb61939c
+ap = 187 b = 187 cp = 186 d = 187
+ip = 0xbb5f2010 op = 0xbb5f93a0 opb = 0xbb6193a0
+ap = 193 b = 192 cp = 189 d = 188
+ip = 0xbb5f2410 op = 0xbb5f93a4 opb = 0xbb6193a4
+ap = 193 b = 192 cp = 191 d = 190
+ip = 0xbb5f2810 op = 0xbb5f93a8 opb = 0xbb6193a8
+ap = 195 b = 195 cp = 194 d = 192
+ip = 0xbb5f2c10 op = 0xbb5f93ac opb = 0xbb6193ac
+ap = 194 b = 194 cp = 194 d = 193
+ip = 0xbb5f3010 op = 0xbb5f93b0 opb = 0xbb6193b0
+ap = 191 b = 191 cp = 192 d = 194
+ip = 0xbb5f3410 op = 0xbb5f93b4 opb = 0xbb6193b4
+ap = 193 b = 194 cp = 195 d = 196
+ip = 0xbb5f3810 op = 0xbb5f93b8 opb = 0xbb6193b8
+ap = 194 b = 194 cp = 194 d = 193
+ip = 0xbb5f3c10 op = 0xbb5f93bc opb = 0xbb6193bc
+ap = 193 b = 193 cp = 192 d = 193
+ip = 0xbb5f4010 op = 0xbb5f93c0 opb = 0xbb6193c0
+ap = 194 b = 194 cp = 194 d = 194
+ip = 0xbb5f4410 op = 0xbb5f93c4 opb = 0xbb6193c4
+ap = 194 b = 194 cp = 194 d = 194
+ip = 0xbb5f4810 op = 0xbb5f93c8 opb = 0xbb6193c8
+ap = 195 b = 194 cp = 194 d = 195
+ip = 0xbb5f4c10 op = 0xbb5f93cc opb = 0xbb6193cc
+ap = 191 b = 191 cp = 191 d = 193
+ip = 0xbb5f5010 op = 0xbb5f93d0 opb = 0xbb6193d0
+ap = 192 b = 192 cp = 193 d = 193
+ip = 0xbb5f5410 op = 0xbb5f93d4 opb = 0xbb6193d4
+ap = 195 b = 194 cp = 194 d = 195
+ip = 0xbb5f5810 op = 0xbb5f93d8 opb = 0xbb6193d8
+ap = 195 b = 195 cp = 196 d = 197
+ip = 0xbb5f5c10 op = 0xbb5f93dc opb = 0xbb6193dc
+ap = 194 b = 194 cp = 196 d = 198
+ip = 0xbb5f6010 op = 0xbb5f93e0 opb = 0xbb6193e0
+ap = 196 b = 196 cp = 197 d = 198
+ip = 0xbb5f6410 op = 0xbb5f93e4 opb = 0xbb6193e4
+ap = 195 b = 195 cp = 196 d = 196
+ip = 0xbb5f6810 op = 0xbb5f93e8 opb = 0xbb6193e8
+ap = 194 b = 194 cp = 195 d = 197
+ip = 0xbb5f6c10 op = 0xbb5f93ec opb = 0xbb6193ec
+ap = 191 b = 191 cp = 192 d = 195
+ip = 0xbb5f7010 op = 0xbb5f93f0 opb = 0xbb6193f0
+ap = 188 b = 188 cp = 190 d = 194
+ip = 0xbb5f7410 op = 0xbb5f93f4 opb = 0xbb6193f4
+ap = 188 b = 188 cp = 190 d = 195
+ip = 0xbb5f7810 op = 0xbb5f93f8 opb = 0xbb6193f8
+ap = 187 b = 187 cp = 190 d = 195
+ip = 0xbb5f7c10 op = 0xbb5f93fc opb = 0xbb6193fc
+ap = 195 b = 195 cp = 196 d = 191
+ip = 0xbb5f8010 op = 0xbb5f9400 opb = 0xbb619400
+ap = 215 b = 215 cp = 209 d = 182
+ip = 0xbb5f8410 op = 0xbb5f9404 opb = 0xbb619404
+ap = 228 b = 227 cp = 213 d = 164
+ip = 0xbb5f8810 op = 0xbb5f9408 opb = 0xbb619408
+ap = 228 b = 225 cp = 205 d = 145
+ip = 0xbb5f8c10 op = 0xbb5f940c opb = 0xbb61940c
+ap = 214 b = 209 cp = 184 d = 125
+w = 0x100 ip = 0xbb5b9010 tp = 0xbb5f9010 
+ip = 0xbb5f9010 op = 0xbb5b9010 opb = 0xbb5d9010
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb5f9410 op = 0xbb5b9014 opb = 0xbb5d9014
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb5f9810 op = 0xbb5b9018 opb = 0xbb5d9018
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb5f9c10 op = 0xbb5b901c opb = 0xbb5d901c
+ap = 1 b = 0 cp = 0 d = -1
+ip = 0xbb5fa010 op = 0xbb5b9020 opb = 0xbb5d9020
+ap = 1 b = 0 cp = 0 d = -1
+ip = 0xbb5fa410 op = 0xbb5b9024 opb = 0xbb5d9024
+ap = -1 b = 0 cp = 0 d = 0
+ip = 0xbb5fa810 op = 0xbb5b9028 opb = 0xbb5d9028
+ap = 0 b = 0 cp = -1 d = 0
+ip = 0xbb5fac10 op = 0xbb5b902c opb = 0xbb5d902c
+ap = 1 b = 2 cp = 1 d = 0
+ip = 0xbb5fb010 op = 0xbb5b9030 opb = 0xbb5d9030
+ap = 1 b = 1 cp = 1 d = 1
+ip = 0xbb5fb410 op = 0xbb5b9034 opb = 0xbb5d9034
+ap = 1 b = 1 cp = 0 d = 0
+ip = 0xbb5fb810 op = 0xbb5b9038 opb = 0xbb5d9038
+ap = 1 b = 0 cp = 0 d = 1
+ip = 0xbb5fbc10 op = 0xbb5b903c opb = 0xbb5d903c
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb5fc010 op = 0xbb5b9040 opb = 0xbb5d9040
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb5fc410 op = 0xbb5b9044 opb = 0xbb5d9044
+ap = 0 b = 0 cp = 0 d = 1
+ip = 0xbb5fc810 op = 0xbb5b9048 opb = 0xbb5d9048
+ap = 1 b = 0 cp = 0 d = 0
+ip = 0xbb5fcc10 op = 0xbb5b904c opb = 0xbb5d904c
+ap = -1 b = 1 cp = 1 d = 1
+ip = 0xbb5fd010 op = 0xbb5b9050 opb = 0xbb5d9050
+ap = 0 b = 1 cp = 0 d = 1
+ip = 0xbb5fd410 op = 0xbb5b9054 opb = 0xbb5d9054
+ap = 0 b = 1 cp = 0 d = -1
+ip = 0xbb5fd810 op = 0xbb5b9058 opb = 0xbb5d9058
+ap = 1 b = 0 cp = 1 d = 2
+ip = 0xbb5fdc10 op = 0xbb5b905c opb = 0xbb5d905c
+ap = 1 b = 0 cp = 0 d = 1
+ip = 0xbb5fe010 op = 0xbb5b9060 opb = 0xbb5d9060
+ap = 1 b = 0 cp = 0 d = 1
+ip = 0xbb5fe410 op = 0xbb5b9064 opb = 0xbb5d9064
+ap = 1 b = 0 cp = 2 d = 3
+ip = 0xbb5fe810 op = 0xbb5b9068 opb = 0xbb5d9068
+ap = 1 b = 2 cp = 1 d = -1
+ip = 0xbb5fec10 op = 0xbb5b906c opb = 0xbb5d906c
+ap = 3 b = 2 cp = 0 d = -2
+ip = 0xbb5ff010 op = 0xbb5b9070 opb = 0xbb5d9070
+ap = 0 b = -2 cp = -3 d = -1
+ip = 0xbb5ff410 op = 0xbb5b9074 opb = 0xbb5d9074
+ap = -4 b = -2 cp = 0 d = 1
+ip = 0xbb5ff810 op = 0xbb5b9078 opb = 0xbb5d9078
+ap = 0 b = 1 cp = 1 d = 1
+ip = 0xbb5ffc10 op = 0xbb5b907c opb = 0xbb5d907c
+ap = 2 b = 0 cp = 0 d = 1
+ip = 0xbb600010 op = 0xbb5b9080 opb = 0xbb5d9080
+ap = 2 b = 2 cp = 0 d = 1
+ip = 0xbb600410 op = 0xbb5b9084 opb = 0xbb5d9084
+ap = -2 b = -2 cp = 0 d = -1
+ip = 0xbb600810 op = 0xbb5b9088 opb = 0xbb5d9088
+ap = 0 b = -2 cp = 0 d = 1
+ip = 0xbb600c10 op = 0xbb5b908c opb = 0xbb5d908c
+ap = 0 b = 0 cp = 1 d = 0
+ip = 0xbb601010 op = 0xbb5b9090 opb = 0xbb5d9090
+ap = -1 b = 0 cp = 1 d = 1
+ip = 0xbb601410 op = 0xbb5b9094 opb = 0xbb5d9094
+ap = 0 b = 0 cp = 1 d = 1
+ip = 0xbb601810 op = 0xbb5b9098 opb = 0xbb5d9098
+ap = 0 b = 0 cp = -1 d = -1
+ip = 0xbb601c10 op = 0xbb5b909c opb = 0xbb5d909c
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb602010 op = 0xbb5b90a0 opb = 0xbb5d90a0
+ap = -1 b = 0 cp = 1 d = 1
+ip = 0xbb602410 op = 0xbb5b90a4 opb = 0xbb5d90a4
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb602810 op = 0xbb5b90a8 opb = 0xbb5d90a8
+ap = -3 b = 0 cp = 1 d = 0
+ip = 0xbb602c10 op = 0xbb5b90ac opb = 0xbb5d90ac
+ap = 0 b = 0 cp = -1 d = 0
+ip = 0xbb603010 op = 0xbb5b90b0 opb = 0xbb5d90b0
+ap = 0 b = 0 cp = -1 d = -1
+ip = 0xbb603410 op = 0xbb5b90b4 opb = 0xbb5d90b4
+ap = 0 b = 1 cp = 0 d = 0
+ip = 0xbb603810 op = 0xbb5b90b8 opb = 0xbb5d90b8
+ap = 0 b = -1 cp = 0 d = 2
+ip = 0xbb603c10 op = 0xbb5b90bc opb = 0xbb5d90bc
+ap = 1 b = 1 cp = 1 d = -1
+ip = 0xbb604010 op = 0xbb5b90c0 opb = 0xbb5d90c0
+ap = -1 b = -1 cp = 0 d = 0
+ip = 0xbb604410 op = 0xbb5b90c4 opb = 0xbb5d90c4
+ap = 2 b = 1 cp = 0 d = 1
+ip = 0xbb604810 op = 0xbb5b90c8 opb = 0xbb5d90c8
+ap = -1 b = 0 cp = 1 d = 0
+ip = 0xbb604c10 op = 0xbb5b90cc opb = 0xbb5d90cc
+ap = 2 b = 0 cp = 0 d = 1
+ip = 0xbb605010 op = 0xbb5b90d0 opb = 0xbb5d90d0
+ap = -1 b = 1 cp = 1 d = 0
+ip = 0xbb605410 op = 0xbb5b90d4 opb = 0xbb5d90d4
+ap = 1 b = -1 cp = 0 d = 0
+ip = 0xbb605810 op = 0xbb5b90d8 opb = 0xbb5d90d8
+ap = -1 b = -1 cp = 0 d = 0
+ip = 0xbb605c10 op = 0xbb5b90dc opb = 0xbb5d90dc
+ap = -1 b = 0 cp = 0 d = 0
+ip = 0xbb606010 op = 0xbb5b90e0 opb = 0xbb5d90e0
+ap = 1 b = 0 cp = 1 d = -1
+ip = 0xbb606410 op = 0xbb5b90e4 opb = 0xbb5d90e4
+ap = 1 b = 1 cp = 1 d = 0
+ip = 0xbb606810 op = 0xbb5b90e8 opb = 0xbb5d90e8
+ap = 1 b = -1 cp = -1 d = 1
+ip = 0xbb606c10 op = 0xbb5b90ec opb = 0xbb5d90ec
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb607010 op = 0xbb5b90f0 opb = 0xbb5d90f0
+ap = 0 b = -1 cp = 0 d = 1
+ip = 0xbb607410 op = 0xbb5b90f4 opb = 0xbb5d90f4
+ap = 0 b = 1 cp = 1 d = 0
+ip = 0xbb607810 op = 0xbb5b90f8 opb = 0xbb5d90f8
+ap = 1 b = -1 cp = 1 d = 2
+ip = 0xbb607c10 op = 0xbb5b90fc opb = 0xbb5d90fc
+ap = 1 b = -1 cp = 0 d = -1
+ip = 0xbb608010 op = 0xbb5b9100 opb = 0xbb5d9100
+ap = 0 b = 0 cp = 0 d = 1
+ip = 0xbb608410 op = 0xbb5b9104 opb = 0xbb5d9104
+ap = 1 b = -1 cp = 0 d = 1
+ip = 0xbb608810 op = 0xbb5b9108 opb = 0xbb5d9108
+ap = -1 b = -1 cp = -1 d = 0
+ip = 0xbb608c10 op = 0xbb5b910c opb = 0xbb5d910c
+ap = 1 b = 0 cp = 0 d = 0
+ip = 0xbb609010 op = 0xbb5b9110 opb = 0xbb5d9110
+ap = 2 b = 1 cp = 0 d = 1
+ip = 0xbb609410 op = 0xbb5b9114 opb = 0xbb5d9114
+ap = 0 b = 1 cp = 0 d = -1
+ip = 0xbb609810 op = 0xbb5b9118 opb = 0xbb5d9118
+ap = -1 b = 0 cp = 0 d = 0
+ip = 0xbb609c10 op = 0xbb5b911c opb = 0xbb5d911c
+ap = 2 b = 2 cp = 1 d = 1
+ip = 0xbb60a010 op = 0xbb5b9120 opb = 0xbb5d9120
+ap = 0 b = 0 cp = 0 d = 1
+ip = 0xbb60a410 op = 0xbb5b9124 opb = 0xbb5d9124
+ap = 0 b = 1 cp = 0 d = 0
+ip = 0xbb60a810 op = 0xbb5b9128 opb = 0xbb5d9128
+ap = 1 b = 1 cp = 2 d = 2
+ip = 0xbb60ac10 op = 0xbb5b912c opb = 0xbb5d912c
+ap = 2 b = 1 cp = -1 d = 0
+ip = 0xbb60b010 op = 0xbb5b9130 opb = 0xbb5d9130
+ap = -1 b = 0 cp = 0 d = 0
+ip = 0xbb60b410 op = 0xbb5b9134 opb = 0xbb5d9134
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb60b810 op = 0xbb5b9138 opb = 0xbb5d9138
+ap = 0 b = 0 cp = -1 d = 0
+ip = 0xbb60bc10 op = 0xbb5b913c opb = 0xbb5d913c
+ap = 1 b = 1 cp = 1 d = 0
+ip = 0xbb60c010 op = 0xbb5b9140 opb = 0xbb5d9140
+ap = 0 b = -1 cp = -1 d = -1
+ip = 0xbb60c410 op = 0xbb5b9144 opb = 0xbb5d9144
+ap = 0 b = 1 cp = 0 d = 0
+ip = 0xbb60c810 op = 0xbb5b9148 opb = 0xbb5d9148
+ap = 0 b = 1 cp = 1 d = 0
+ip = 0xbb60cc10 op = 0xbb5b914c opb = 0xbb5d914c
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb60d010 op = 0xbb5b9150 opb = 0xbb5d9150
+ap = 1 b = 0 cp = 1 d = -1
+ip = 0xbb60d410 op = 0xbb5b9154 opb = 0xbb5d9154
+ap = 1 b = 1 cp = 0 d = -1
+ip = 0xbb60d810 op = 0xbb5b9158 opb = 0xbb5d9158
+ap = 1 b = 1 cp = 1 d = 2
+ip = 0xbb60dc10 op = 0xbb5b915c opb = 0xbb5d915c
+ap = 1 b = 1 cp = 0 d = -1
+ip = 0xbb60e010 op = 0xbb5b9160 opb = 0xbb5d9160
+ap = -1 b = -1 cp = -1 d = 0
+ip = 0xbb60e410 op = 0xbb5b9164 opb = 0xbb5d9164
+ap = 1 b = 1 cp = 1 d = 1
+ip = 0xbb60e810 op = 0xbb5b9168 opb = 0xbb5d9168
+ap = 1 b = -1 cp = -1 d = 0
+ip = 0xbb60ec10 op = 0xbb5b916c opb = 0xbb5d916c
+ap = -2 b = -1 cp = 0 d = -1
+ip = 0xbb60f010 op = 0xbb5b9170 opb = 0xbb5d9170
+ap = 0 b = 0 cp = 0 d = 0
+ip = 0xbb60f410 op = 0xbb5b9174 opb = 0xbb5d9174
+ap = -1 b = 0 cp = 0 d = 1
+ip = 0xbb60f810 op = 0xbb5b9178 opb = 0xbb5d9178
+ap = 3 b = 1 cp = 0 d = 1
+ip = 0xbb60fc10 op = 0xbb5b917c opb = 0xbb5d917c
+ap = 0 b = 1 cp = -1 d = -1
+ip = 0xbb610010 op = 0xbb5b9180 opb = 0xbb5d9180
+ap = 0 b = 0 cp = 1 d = 1
+ip = 0xbb610410 op = 0xbb5b9184 opb = 0xbb5d9184
+ap = 0 b = -1 cp = -1 d = 0
+ip = 0xbb610810 op = 0xbb5b9188 opb = 0xbb5d9188
+ap = 0 b = 0 cp = -1 d = 0
+ip = 0xbb610c10 op = 0xbb5b918c opb = 0xbb5d918c
+ap = 1 b = 0 cp = 1 d = 1
+ip = 0xbb611010 op = 0xbb5b9190 opb = 0xbb5d9190
+ap = -2 b = -1 cp = -2 d = 0
+ip = 0xbb611410 op = 0xbb5b9194 opb = 0xbb5d9194
+ap = 0 b = 0 cp = -1 d = -2
+ip = 0xbb611810 op = 0xbb5b9198 opb = 0xbb5d9198
+ap = -4 b = -4 cp = -1 d = -2
+ip = 0xbb611c10 op = 0xbb5b919c opb = 0xbb5d919c
+ap = 7 b = 3 cp = -1 d = -2
+ip = 0xbb612010 op = 0xbb5b91a0 opb = 0xbb5d91a0
+ap = 1 b = 3 cp = 5 d = 4
+ip = 0xbb612410 op = 0xbb5b91a4 opb = 0xbb5d91a4
+ap = 2 b = 1 cp = 0 d = 0
+ip = 0xbb612810 op = 0xbb5b91a8 opb = 0xbb5d91a8
+ap = 0 b = 1 cp = 1 d = 1
+ip = 0xbb612c10 op = 0xbb5b91ac opb = 0xbb5d91ac
+ap = 5 b = 4 cp = 1 d = 2
+ip = 0xbb613010 op = 0xbb5b91b0 opb = 0xbb5d91b0
+ap = -2 b = 0 cp = 2 d = 1
+ip = 0xbb613410 op = 0xbb5b91b4 opb = 0xbb5d91b4
+ap = -3 b = -2 cp = 1 d = 1
+ip = 0xbb613810 op = 0xbb5b91b8 opb = 0xbb5d91b8
+ap = -2 b = -3 cp = -3 d = 0
+ip = 0xbb613c10 op = 0xbb5b91bc opb = 0xbb5d91bc
+ap = 0 b = 2 cp = 0 d = 0
+ip = 0xbb614010 op = 0xbb5b91c0 opb = 0xbb5d91c0
+ap = 1 b = 0 cp = -1 d = 0
+ip = 0xbb614410 op = 0xbb5b91c4 opb = 0xbb5d91c4
+ap = -1 b = 0 cp = 0 d = -1
+ip = 0xbb614810 op = 0xbb5b91c8 opb = 0xbb5d91c8
+ap = 0 b = 1 cp = 0 d = 1
+ip = 0xbb614c10 op = 0xbb5b91cc opb = 0xbb5d91cc
+ap = -1 b = -1 cp = 1 d = 0
+ip = 0xbb615010 op = 0xbb5b91d0 opb = 0xbb5d91d0
+ap = 0 b = -1 cp = 0 d = -1
+ip = 0xbb615410 op = 0xbb5b91d4 opb = 0xbb5d91d4
+ap = -1 b = -1 cp = 0 d = 1
+ip = 0xbb615810 op = 0xbb5b91d8 opb = 0xbb5d91d8
+ap = 1 b = 0 cp = 0 d = -1
+ip = 0xbb615c10 op = 0xbb5b91dc opb = 0xbb5d91dc
+ap = 1 b = 2 cp = 0 d = -1
+ip = 0xbb616010 op = 0xbb5b91e0 opb = 0xbb5d91e0
+ap = 0 b = 1 cp = 0 d = 0
+ip = 0xbb616410 op = 0xbb5b91e4 opb = 0xbb5d91e4
+ap = -2 b = -3 cp = -4 d = -6
+ip = 0xbb616810 op = 0xbb5b91e8 opb = 0xbb5d91e8
+ap = -3 b = -4 cp = -3 d = 0
+ip = 0xbb616c10 op = 0xbb5b91ec opb = 0xbb5d91ec
+ap = 7 b = 6 cp = 5 d = 3
+ip = 0xbb617010 op = 0xbb5b91f0 opb = 0xbb5d91f0
+ap = 2 b = 1 cp = -1 d = -1
+ip = 0xbb617410 op = 0xbb5b91f4 opb = 0xbb5d91f4
+ap = 0 b = 1 cp = 2 d = 2
+ip = 0xbb617810 op = 0xbb5b91f8 opb = 0xbb5d91f8
+ap = 0 b = 3 cp = 3 d = 3
+ip = 0xbb617c10 op = 0xbb5b91fc opb = 0xbb5d91fc
+ap = -3 b = -4 cp = -3 d = 0
+ip = 0xbb618010 op = 0xbb5b9200 opb = 0xbb5d9200
+ap = 2 b = -1 cp = -2 d = -1
+ip = 0xbb618410 op = 0xbb5b9204 opb = 0xbb5d9204
+ap = 1 b = 1 cp = 0 d = -1
+ip = 0xbb618810 op = 0xbb5b9208 opb = 0xbb5d9208
+ap = 0 b = 1 cp = 0 d = 1
+ip = 0xbb618c10 op = 0xbb5b920c opb = 0xbb5d920c
+ap = 0 b = -1 cp = -1 d = 0
+ip = 0xbb619010 op = 0xbb5b9210 opb = 0xbb5d9210
+ap = 226 b = 224 cp = 226 d = 227
+ip = 0xbb619410 op = 0xbb5b9214 opb = 0xbb5d9214
+ap = 225 b = 224 cp = 226 d = 227
+ip = 0xbb619810 op = 0xbb5b9218 opb = 0xbb5d9218
+ap = 224 b = 224 cp = 226 d = 226
+ip = 0xbb619c10 op = 0xbb5b921c opb = 0xbb5d921c
+ap = 228 b = 226 cp = 226 d = 226
+ip = 0xbb61a010 op = 0xbb5b9220 opb = 0xbb5d9220
+ap = 226 b = 224 cp = 225 d = 226
+ip = 0xbb61a410 op = 0xbb5b9224 opb = 0xbb5d9224
+ap = 226 b = 224 cp = 225 d = 226
+ip = 0xbb61a810 op = 0xbb5b9228 opb = 0xbb5d9228
+ap = 225 b = 225 cp = 225 d = 227
+ip = 0xbb61ac10 op = 0xbb5b922c opb = 0xbb5d922c
+ap = 228 b = 228 cp = 228 d = 227
+ip = 0xbb61b010 op = 0xbb5b9230 opb = 0xbb5d9230
+ap = 228 b = 227 cp = 226 d = 226
+ip = 0xbb61b410 op = 0xbb5b9234 opb = 0xbb5d9234
+ap = 228 b = 227 cp = 228 d = 227
+ip = 0xbb61b810 op = 0xbb5b9238 opb = 0xbb5d9238
+ap = 228 b = 228 cp = 228 d = 228
+ip = 0xbb61bc10 op = 0xbb5b923c opb = 0xbb5d923c
+ap = 229 b = 228 cp = 228 d = 228
+ip = 0xbb61c010 op = 0xbb5b9240 opb = 0xbb5d9240
+ap = 229 b = 229 cp = 229 d = 229
+ip = 0xbb61c410 op = 0xbb5b9244 opb = 0xbb5d9244
+ap = 231 b = 230 cp = 231 d = 232
+ip = 0xbb61c810 op = 0xbb5b9248 opb = 0xbb5d9248
+ap = 231 b = 230 cp = 232 d = 235
+ip = 0xbb61cc10 op = 0xbb5b924c opb = 0xbb5d924c
+ap = 231 b = 233 cp = 235 d = 237
+ip = 0xbb61d010 op = 0xbb5b9250 opb = 0xbb5d9250
+ap = 235 b = 236 cp = 237 d = 237
+ip = 0xbb61d410 op = 0xbb5b9254 opb = 0xbb5d9254
+ap = 237 b = 238 cp = 238 d = 235
+ip = 0xbb61d810 op = 0xbb5b9258 opb = 0xbb5d9258
+ap = 239 b = 238 cp = 236 d = 233
+ip = 0xbb61dc10 op = 0xbb5b925c opb = 0xbb5d925c
+ap = 236 b = 233 cp = 231 d = 228
+ip = 0xbb61e010 op = 0xbb5b9260 opb = 0xbb5d9260
+ap = 233 b = 230 cp = 226 d = 217
+ip = 0xbb61e410 op = 0xbb5b9264 opb = 0xbb5d9264
+ap = 231 b = 225 cp = 214 d = 194
+ip = 0xbb61e810 op = 0xbb5b9268 opb = 0xbb5d9268
+ap = 222 b = 210 cp = 188 d = 165
+ip = 0xbb61ec10 op = 0xbb5b926c opb = 0xbb5d926c
+ap = 200 b = 181 cp = 162 d = 155
+ip = 0xbb61f010 op = 0xbb5b9270 opb = 0xbb5d9270
+ap = 165 b = 156 cp = 154 d = 156
+ip = 0xbb61f410 op = 0xbb5b9274 opb = 0xbb5d9274
+ap = 151 b = 154 cp = 158 d = 162
+ip = 0xbb61f810 op = 0xbb5b9278 opb = 0xbb5d9278
+ap = 156 b = 156 cp = 160 d = 162
+ip = 0xbb61fc10 op = 0xbb5b927c opb = 0xbb5d927c
+ap = 161 b = 161 cp = 161 d = 163
+ip = 0xbb620010 op = 0xbb5b9280 opb = 0xbb5d9280
+ap = 158 b = 158 cp = 159 d = 159
+ip = 0xbb620410 op = 0xbb5b9284 opb = 0xbb5d9284
+ap = 155 b = 154 cp = 156 d = 157
+ip = 0xbb620810 op = 0xbb5b9288 opb = 0xbb5d9288
+ap = 158 b = 157 cp = 159 d = 160
+ip = 0xbb620c10 op = 0xbb5b928c opb = 0xbb5d928c
+ap = 160 b = 161 cp = 163 d = 163
+ip = 0xbb621010 op = 0xbb5b9290 opb = 0xbb5d9290
+ap = 167 b = 167 cp = 168 d = 170
+ip = 0xbb621410 op = 0xbb5b9294 opb = 0xbb5d9294
+ap = 170 b = 170 cp = 172 d = 172
+ip = 0xbb621810 op = 0xbb5b9298 opb = 0xbb5d9298
+ap = 170 b = 171 cp = 173 d = 174
+ip = 0xbb621c10 op = 0xbb5b929c opb = 0xbb5d929c
+ap = 172 b = 173 cp = 175 d = 177
+ip = 0xbb622010 op = 0xbb5b92a0 opb = 0xbb5d92a0
+ap = 174 b = 172 cp = 173 d = 176
+ip = 0xbb622410 op = 0xbb5b92a4 opb = 0xbb5d92a4
+ap = 172 b = 171 cp = 170 d = 171
+ip = 0xbb622810 op = 0xbb5b92a8 opb = 0xbb5d92a8
+ap = 170 b = 170 cp = 169 d = 170
+ip = 0xbb622c10 op = 0xbb5b92ac opb = 0xbb5d92ac
+ap = 171 b = 169 cp = 169 d = 168
+ip = 0xbb623010 op = 0xbb5b92b0 opb = 0xbb5d92b0
+ap = 171 b = 170 cp = 168 d = 166
+ip = 0xbb623410 op = 0xbb5b92b4 opb = 0xbb5d92b4
+ap = 166 b = 168 cp = 168 d = 169
+ip = 0xbb623810 op = 0xbb5b92b8 opb = 0xbb5d92b8
+ap = 171 b = 169 cp = 169 d = 170
+ip = 0xbb623c10 op = 0xbb5b92bc opb = 0xbb5d92bc
+ap = 169 b = 170 cp = 172 d = 170
+ip = 0xbb624010 op = 0xbb5b92c0 opb = 0xbb5d92c0
+ap = 173 b = 171 cp = 171 d = 170
+ip = 0xbb624410 op = 0xbb5b92c4 opb = 0xbb5d92c4
+ap = 171 b = 172 cp = 172 d = 173
+ip = 0xbb624810 op = 0xbb5b92c8 opb = 0xbb5d92c8
+ap = 175 b = 174 cp = 175 d = 175
+ip = 0xbb624c10 op = 0xbb5b92cc opb = 0xbb5d92cc
+ap = 178 b = 178 cp = 179 d = 178
+ip = 0xbb625010 op = 0xbb5b92d0 opb = 0xbb5d92d0
+ap = 181 b = 178 cp = 177 d = 175
+ip = 0xbb625410 op = 0xbb5b92d4 opb = 0xbb5d92d4
+ap = 178 b = 178 cp = 178 d = 177
+ip = 0xbb625810 op = 0xbb5b92d8 opb = 0xbb5d92d8
+ap = 184 b = 181 cp = 179 d = 178
+ip = 0xbb625c10 op = 0xbb5b92dc opb = 0xbb5d92dc
+ap = 179 b = 179 cp = 179 d = 179
+ip = 0xbb626010 op = 0xbb5b92e0 opb = 0xbb5d92e0
+ap = 182 b = 181 cp = 181 d = 179
+ip = 0xbb626410 op = 0xbb5b92e4 opb = 0xbb5d92e4
+ap = 181 b = 179 cp = 179 d = 179
+ip = 0xbb626810 op = 0xbb5b92e8 opb = 0xbb5d92e8
+ap = 175 b = 177 cp = 177 d = 176
+ip = 0xbb626c10 op = 0xbb5b92ec opb = 0xbb5d92ec
+ap = 173 b = 175 cp = 176 d = 175
+ip = 0xbb627010 op = 0xbb5b92f0 opb = 0xbb5d92f0
+ap = 178 b = 176 cp = 176 d = 176
+ip = 0xbb627410 op = 0xbb5b92f4 opb = 0xbb5d92f4
+ap = 180 b = 179 cp = 178 d = 176
+ip = 0xbb627810 op = 0xbb5b92f8 opb = 0xbb5d92f8
+ap = 177 b = 177 cp = 176 d = 174
+ip = 0xbb627c10 op = 0xbb5b92fc opb = 0xbb5d92fc
+ap = 177 b = 177 cp = 176 d = 175
+ip = 0xbb628010 op = 0xbb5b9300 opb = 0xbb5d9300
+ap = 175 b = 176 cp = 175 d = 174
+ip = 0xbb628410 op = 0xbb5b9304 opb = 0xbb5d9304
+ap = 175 b = 176 cp = 175 d = 173
+ip = 0xbb628810 op = 0xbb5b9308 opb = 0xbb5d9308
+ap = 179 b = 176 cp = 176 d = 175
+ip = 0xbb628c10 op = 0xbb5b930c opb = 0xbb5d930c
+ap = 175 b = 173 cp = 174 d = 175
+ip = 0xbb629010 op = 0xbb5b9310 opb = 0xbb5d9310
+ap = 173 b = 173 cp = 173 d = 172
+ip = 0xbb629410 op = 0xbb5b9314 opb = 0xbb5d9314
+ap = 168 b = 168 cp = 167 d = 166
+ip = 0xbb629810 op = 0xbb5b9318 opb = 0xbb5d9318
+ap = 171 b = 170 cp = 168 d = 166
+ip = 0xbb629c10 op = 0xbb5b931c opb = 0xbb5d931c
+ap = 175 b = 171 cp = 169 d = 171
+ip = 0xbb62a010 op = 0xbb5b9320 opb = 0xbb5d9320
+ap = 174 b = 172 cp = 173 d = 171
+ip = 0xbb62a410 op = 0xbb5b9324 opb = 0xbb5d9324
+ap = 178 b = 176 cp = 176 d = 174
+ip = 0xbb62a810 op = 0xbb5b9328 opb = 0xbb5d9328
+ap = 175 b = 172 cp = 170 d = 169
+ip = 0xbb62ac10 op = 0xbb5b932c opb = 0xbb5d932c
+ap = 170 b = 167 cp = 165 d = 162
+ip = 0xbb62b010 op = 0xbb5b9330 opb = 0xbb5d9330
+ap = 162 b = 161 cp = 160 d = 157
+ip = 0xbb62b410 op = 0xbb5b9334 opb = 0xbb5d9334
+ap = 153 b = 152 cp = 152 d = 150
+ip = 0xbb62b810 op = 0xbb5b9338 opb = 0xbb5d9338
+ap = 147 b = 144 cp = 143 d = 143
+ip = 0xbb62bc10 op = 0xbb5b933c opb = 0xbb5d933c
+ap = 140 b = 139 cp = 136 d = 135
+ip = 0xbb62c010 op = 0xbb5b9340 opb = 0xbb5d9340
+ap = 141 b = 137 cp = 136 d = 135
+ip = 0xbb62c410 op = 0xbb5b9344 opb = 0xbb5d9344
+ap = 142 b = 141 cp = 138 d = 134
+ip = 0xbb62c810 op = 0xbb5b9348 opb = 0xbb5d9348
+ap = 146 b = 142 cp = 140 d = 139
+ip = 0xbb62cc10 op = 0xbb5b934c opb = 0xbb5d934c
+ap = 148 b = 146 cp = 144 d = 143
+ip = 0xbb62d010 op = 0xbb5b9350 opb = 0xbb5d9350
+ap = 147 b = 146 cp = 145 d = 145
+ip = 0xbb62d410 op = 0xbb5b9354 opb = 0xbb5d9354
+ap = 146 b = 146 cp = 145 d = 146
+ip = 0xbb62d810 op = 0xbb5b9358 opb = 0xbb5d9358
+ap = 146 b = 143 cp = 142 d = 143
+ip = 0xbb62dc10 op = 0xbb5b935c opb = 0xbb5d935c
+ap = 141 b = 140 cp = 138 d = 139
+ip = 0xbb62e010 op = 0xbb5b9360 opb = 0xbb5d9360
+ap = 137 b = 136 cp = 138 d = 138
+ip = 0xbb62e410 op = 0xbb5b9364 opb = 0xbb5d9364
+ap = 134 b = 132 cp = 132 d = 132
+ip = 0xbb62e810 op = 0xbb5b9368 opb = 0xbb5d9368
+ap = 125 b = 120 cp = 120 d = 122
+ip = 0xbb62ec10 op = 0xbb5b936c opb = 0xbb5d936c
+ap = 112 b = 112 cp = 114 d = 116
+ip = 0xbb62f010 op = 0xbb5b9370 opb = 0xbb5d9370
+ap = 105 b = 107 cp = 111 d = 113
+ip = 0xbb62f410 op = 0xbb5b9374 opb = 0xbb5d9374
+ap = 106 b = 106 cp = 109 d = 114
+ip = 0xbb62f810 op = 0xbb5b9378 opb = 0xbb5d9378
+ap = 103 b = 102 cp = 105 d = 107
+ip = 0xbb62fc10 op = 0xbb5b937c opb = 0xbb5d937c
+ap = 98 b = 98 cp = 101 d = 104
+ip = 0xbb630010 op = 0xbb5b9380 opb = 0xbb5d9380
+ap = 97 b = 97 cp = 99 d = 101
+ip = 0xbb630410 op = 0xbb5b9384 opb = 0xbb5d9384
+ap = 95 b = 95 cp = 96 d = 97
+ip = 0xbb630810 op = 0xbb5b9388 opb = 0xbb5d9388
+ap = 93 b = 94 cp = 96 d = 96
+ip = 0xbb630c10 op = 0xbb5b938c opb = 0xbb5d938c
+ap = 94 b = 93 cp = 93 d = 92
+ip = 0xbb631010 op = 0xbb5b9390 opb = 0xbb5d9390
+ap = 89 b = 92 cp = 93 d = 93
+ip = 0xbb631410 op = 0xbb5b9394 opb = 0xbb5d9394
+ap = 99 b = 100 cp = 101 d = 98
+ip = 0xbb631810 op = 0xbb5b9398 opb = 0xbb5d9398
+ap = 124 b = 119 cp = 114 d = 109
+ip = 0xbb631c10 op = 0xbb5b939c opb = 0xbb5d939c
+ap = 162 b = 160 cp = 153 d = 144
+ip = 0xbb632010 op = 0xbb5b93a0 opb = 0xbb5d93a0
+ap = 169 b = 168 cp = 168 d = 165
+ip = 0xbb632410 op = 0xbb5b93a4 opb = 0xbb5d93a4
+ap = 166 b = 166 cp = 168 d = 170
+ip = 0xbb632810 op = 0xbb5b93a8 opb = 0xbb5d93a8
+ap = 160 b = 163 cp = 168 d = 172
+ip = 0xbb632c10 op = 0xbb5b93ac opb = 0xbb5d93ac
+ap = 138 b = 146 cp = 158 d = 166
+ip = 0xbb633010 op = 0xbb5b93b0 opb = 0xbb5d93b0
+ap = 94 b = 113 cp = 136 d = 153
+ip = 0xbb633410 op = 0xbb5b93b4 opb = 0xbb5d93b4
+ap = 78 b = 87 cp = 107 d = 130
+ip = 0xbb633810 op = 0xbb5b93b8 opb = 0xbb5d93b8
+ap = 75 b = 79 cp = 92 d = 117
+ip = 0xbb633c10 op = 0xbb5b93bc opb = 0xbb5d93bc
+ap = 73 b = 78 cp = 87 d = 109
+ip = 0xbb634010 op = 0xbb5b93c0 opb = 0xbb5d93c0
+ap = 72 b = 73 cp = 79 d = 99
+ip = 0xbb634410 op = 0xbb5b93c4 opb = 0xbb5d93c4
+ap = 72 b = 74 cp = 79 d = 97
+ip = 0xbb634810 op = 0xbb5b93c8 opb = 0xbb5d93c8
+ap = 71 b = 71 cp = 76 d = 92
+ip = 0xbb634c10 op = 0xbb5b93cc opb = 0xbb5d93cc
+ap = 72 b = 71 cp = 73 d = 86
+ip = 0xbb635010 op = 0xbb5b93d0 opb = 0xbb5d93d0
+ap = 77 b = 75 cp = 76 d = 84
+ip = 0xbb635410 op = 0xbb5b93d4 opb = 0xbb5d93d4
+ap = 80 b = 79 cp = 77 d = 79
+ip = 0xbb635810 op = 0xbb5b93d8 opb = 0xbb5d93d8
+ap = 80 b = 78 cp = 76 d = 78
+ip = 0xbb635c10 op = 0xbb5b93dc opb = 0xbb5d93dc
+ap = 77 b = 77 cp = 76 d = 78
+ip = 0xbb636010 op = 0xbb5b93e0 opb = 0xbb5d93e0
+ap = 76 b = 73 cp = 71 d = 75
+ip = 0xbb636410 op = 0xbb5b93e4 opb = 0xbb5d93e4
+ap = 85 b = 81 cp = 80 d = 83
+ip = 0xbb636810 op = 0xbb5b93e8 opb = 0xbb5d93e8
+ap = 114 b = 124 cp = 127 d = 125
+ip = 0xbb636c10 op = 0xbb5b93ec opb = 0xbb5d93ec
+ap = 145 b = 146 cp = 145 d = 143
+ip = 0xbb637010 op = 0xbb5b93f0 opb = 0xbb5d93f0
+ap = 136 b = 142 cp = 147 d = 150
+ip = 0xbb637410 op = 0xbb5b93f4 opb = 0xbb5d93f4
+ap = 112 b = 132 cp = 146 d = 155
+ip = 0xbb637810 op = 0xbb5b93f8 opb = 0xbb5d93f8
+ap = 94 b = 112 cp = 127 d = 137
+ip = 0xbb637c10 op = 0xbb5b93fc opb = 0xbb5d93fc
+ap = 91 b = 99 cp = 106 d = 117
+ip = 0xbb638010 op = 0xbb5b9400 opb = 0xbb5d9400
+ap = 95 b = 100 cp = 103 d = 105
+ip = 0xbb638410 op = 0xbb5b9404 opb = 0xbb5d9404
+ap = 92 b = 98 cp = 97 d = 97
+ip = 0xbb638810 op = 0xbb5b9408 opb = 0xbb5d9408
+ap = 89 b = 92 cp = 96 d = 96
+ip = 0xbb638c10 op = 0xbb5b940c opb = 0xbb5d940c
+ap = 84 b = 92 cp = 94 d = 94
+back from singlelift
+finished ted dwt
