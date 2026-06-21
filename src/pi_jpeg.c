@@ -1,7 +1,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> 
+#include <string.h>
+
 #include "lifting.h"
 /* First parameter is used to tell the program which sub band to use 
  * 0 Red
@@ -15,153 +16,105 @@
  * ./pi_jpeg 2 1 or ./pi_jpeg 2 0
  */
 struct PTRs {
-	int inpbuf[65536];
+	char *inpbuf;
 	 
 	int flag;
 	int w;
 	int h;
-	 
-	 int *red;
-	
-	 int *grn;
-	 int *blu;
-	 int *alt;
+	char *alt;
 	//int *fwd_inv;
 } ptrs;
 
- 
-int main(int argc, char **argv) {
+char *fff;
+int main(int argc, char *argv[]) {
 	
 	FILE *inptr,*outptr;
 	  char *ch;
 	  int tmp,loop;
 	 
 	 int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
-	 int *wptr,*wptr1,*wptr2;
+	 char *wptr,*wptr1,*wptr2;
 	 int *alt,*alt1,*alt2;
 	
 	 
-	 int *buf_red, *buf_gr, *buf_bl;
+	 char *buf;
 	 int ur,ug,ub,x,y,z;
 	int *fwd_inv;	
 
 	int i,j;
+	
 	 
-	ptrs.w = 256;
-	ptrs.h = 256;
-	  
-	buf_red = ( int *)malloc(sizeof( int)* ptrs.w*ptrs.h*2);	
-	red_s_ptr = buf_red;
-	
-	fwd_inv = (int *)malloc(1);
- 
-	if(buf_red == NULL) return 2;
-	
-	if(fwd_inv == NULL) return 5;
-	red_s_ptr = buf_red;
-    printf("buf_red = 0x%x\n",buf_red);
-     
-    printf("fwd_inv = 0x%x\n",fwd_inv);
-    /*The file rgb_pack.bin contains the rgb images
-     * packed in bits red 29-20
-     * packed in bits grn 19-10
-     * packed in bits blu 9-0 
-    */ 
-	
-	loop = 65536;
-	for(i=0;i<loop;i++) buf_red[i]=ptrs.inpbuf[i];
-		ch = argv[1];
-		tmp = atoi(ch);
-		if (tmp == 0) { 
-			printf("spliting red sub band\n");
-			ptrs.flag = tmp;
-			inptr = fopen("r.bin","rb");
-			if (!inptr)
-			{
-				printf("Unle to open file!");
-				return 1;
-			}
-			else fread(ptrs.inpbuf,sizeof(int),65536,inptr);
- 
-			fclose(inptr);
 
-		}
-		else if (tmp == 1) {
-			printf("spliting green sub band\n");
-			ptrs.flag = tmp;
-						inptr = fopen("g.bin","rb");
-			if (!inptr)
-			{
-				printf("Unle to open file!");
-				return 1;
-			}
-			else fread(ptrs.inpbuf,sizeof(int),65536,inptr);
- 
-			fclose(inptr);
-
-		}	
-		else if (tmp == 2) {
-			printf("spliting blue sub band\n");
-			ptrs.flag = tmp;
-						inptr = fopen("b.bin","rb");
-			if (!inptr)
-			{
-				printf("Unle to open file!");
-				return 1;
-			}
-			else fread(ptrs.inpbuf,sizeof(int),65536,inptr);
- 
-			fclose(inptr);
-
-		}
-		else {
-			printf("First parameter can only be 0 1 2 \n");
-			free(buf_red);
-	        free(fwd_inv);
-			exit (1);
-		}
-		for(i=0;i<loop;i++) buf_red[i]=ptrs.inpbuf[i];
-		ch = argv[2];
-		tmp = atoi(ch); 
- 
-		if (tmp == 0) { 
+	ptrs.w = atoi(argv[1]);
+	ptrs.h = atoi(argv[2]);
+	//ch = argv[3];
+	printf("ptrs.w %d ptrs.h %d \n",ptrs.w,ptrs.h);
+    printf("fname %s \n",argv[3]);
+		//strncpy(fff, argv[3], sizeof(fff) - 1);
+    //printf("address of fname 0x%x \n", &fff);
+    
+    //return 0;
+  tmp = atoi(argv[4]);
+  if (tmp == 0) { 
 			printf("fwd lifting then inv lifting step\n");
-			*fwd_inv = tmp;
-		}
-		else if (tmp == 1) {
+			fwd_inv = tmp;
+	}
+	else if (tmp == 1) {
 			printf("fwd lifting step only\n");
-			*fwd_inv = tmp;
-		} else
-		{
-			printf("2nd parameter can only be 0 1  \n");
-			free(buf_red);
-	        free(fwd_inv);
-			exit (2);
-		}
+			fwd_inv = tmp;
+	}
+
+	
+	buf = ( char *)malloc(sizeof( int)* ptrs.w*ptrs.h*2);
+	printf("buf = 0x%x\n",buf);
+	ptrs.inpbuf = buf;
+	printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
+	fwd_inv = (int *)malloc(1);
+	printf("fwd_inv = 0x%x\n",fwd_inv);
 	 
-  		buf_red = red_s_ptr;
-		wptr = buf_red;
-		alt = &buf_red[ptrs.w*ptrs.h];
-		printf("w = 0x%x buf_red wptr = 0x%x alt =  0x%x fwd_inverse =  0x%x fwd_inverse =  0x%x \n",ptrs.w, wptr,alt,fwd_inv,*fwd_inv);
-		printf("starting red dwt\n");
-		
-		lifting(ptrs.w,wptr,alt,fwd_inv);
-		printf("finished ted dwt\n");
+	printf("reading \n");
+	ptrs.flag = tmp;
+	inptr = fopen(argv[3],"rb");
+	if (!inptr)
+	{
+		printf("Unle to open file!");
+		return 1;
+	}
+	else 
+	{
+		fread(ptrs.inpbuf,sizeof(char),4096,inptr);
+ 
+		fclose(inptr);
+
+	}
+	loop = 16;
+  for(i=0;i<loop;i++)
+  {
+		printf("0x%x \n",*ptrs.inpbuf);
+		ptrs.inpbuf++;
+  }
+  ptrs.inpbuf = ptrs.inpbuf - loop;
+  printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
+  wptr = ptrs.inpbuf;
+	printf("wptr = 0x%x\n",wptr);
+	ptrs.alt = &buf[ptrs.w*ptrs.h];
+	printf("ptrs.alt = 0x%x\n",ptrs.alt);
+	printf("starting dwt\n");
+  
+	lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
+	printf("finished ted dwt\n");
 		//pack(ptrs.flag, i,buf_red, ptrs.inpbuf);
 	
     outptr = fopen("dwt.bin","wb");
-    if (!outptr)
+  if (!outptr)
 	{
  	printf("Unle to open file!");
 	return 1;
 	}
-	fwrite(buf_red,sizeof( int),65536,outptr);
+	fwrite(ptrs.inpbuf,sizeof( char),4096,outptr);
 	//fwrite(alt,sizeof( int),65536,outptr);
 	fclose(outptr);
- 		
- 	free(buf_red);
-	free(fwd_inv);
- 
+  
 	return 0;
 
 }

@@ -41,9 +41,9 @@
 #ifndef	LIFTING_H
 #define	LIFTING_H
 
-extern	void	singlelift(int rb, int w, int * const ibuf, int * const obuf);
-extern	void	ilift(int rb, int w, int * const ibuf, int * const obuf);
-extern	void	lifting(int w, int *ibuf, int *tmpbuf, int *fwd);
+extern	void	singlelift(char rb, int w, char * const ibuf, char * const obuf);
+extern	void	ilift(char rb, int w, char * const ibuf, char * const obuf);
+extern	void	lifting(int w, char *ibuf, char *tmpbuf, int *fwd);
 
 #endif
 

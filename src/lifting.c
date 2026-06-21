@@ -43,12 +43,12 @@
 //
 #include "lifting.h"
 #include <stdio.h>
-void	singlelift(int rb, int w, int * const ibuf, int * const obuf) {
+void	singlelift(char rb, int w, char * const ibuf, char * const obuf) {
 	int	col, row;
 	//printf("in singlelift \n");
 	for(row=0; row<w; row++) {
-		register int	*ip, *op, *opb;
-		register int	ap,b,cp,d;
+		register char	*ip, *op, *opb;
+		register char	ap,b,cp,d;
 
 		//
 		// Ibuf walks down rows (here), but reads across columns (below)
@@ -110,12 +110,12 @@ void	singlelift(int rb, int w, int * const ibuf, int * const obuf) {
 	}
 }
 
-void	ilift(int rb, int w,  int * const ibuf,  int * const obuf) {
+void	ilift(char rb, int w,  char * const ibuf,  char * const obuf) {
 	int	col, row;
 
 	for(row=0; row<w; row++) {
-		register int	*ip, *ipb, *op;
-		register int	b,c,d,e;
+		register char	*ip, *ipb, *op;
+		register char	b,c,d,e;
 
 		//
 		// Ibuf walks down rows (here), but reads across columns (below)
@@ -172,11 +172,12 @@ void	ilift(int rb, int w,  int * const ibuf,  int * const obuf) {
 	}
 }
 
-void	lifting(int w, int *ibuf, int *tmpbuf, int *fwd) {
-	const	int	rb = w;
+void	lifting(int w, char *ibuf, char *tmpbuf, int *fwd) {
+	const	char	rb = w;
 	int	lvl;
 
-	int	*ip = ibuf, *tp = tmpbuf, *test_fwd = fwd;
+	char	*ip = ibuf, *tp = tmpbuf;
+  int *test_fwd = fwd;
 	printf("ip = 0x%x tp = 0x%x \n",ip,tp);
 	int	ov[3];
 
