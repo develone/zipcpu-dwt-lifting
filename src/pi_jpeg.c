@@ -18,11 +18,11 @@
 struct PTRs {
 	char *inpbuf;
 	 
-	int flag;
-	int w;
-	int h;
-	char *alt;
-	//int *fwd_inv;
+	short int flag;
+	short int w;
+	short int h;
+	short int *alt;
+	//short int *fwd_inv;
 } ptrs;
 
 char *fff;
@@ -30,18 +30,18 @@ int main(int argc, char *argv[]) {
 	
 	FILE *inptr,*outptr;
 	  char *ch;
-	  int tmp,loop;
+	  short int tmp,loop;
 	 
-	 int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
-	 char *wptr,*wptr1,*wptr2;
-	 int *alt,*alt1,*alt2;
+	 short int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
+	 short int *wptr,*wptr1,*wptr2;
+	 short int *alt,*alt1,*alt2;
 	
 	 
 	 char *buf;
-	 int ur,ug,ub,x,y,z;
-	int *fwd_inv;	
+	 short int ur,ug,ub,x,y,z;
+	short int *fwd_inv;	
 
-	int i,j;
+	short int i,j;
 	
 	 
 
@@ -54,67 +54,82 @@ int main(int argc, char *argv[]) {
     //printf("address of fname 0x%x \n", &fff);
     
     //return 0;
-  tmp = atoi(argv[4]);
-  if (tmp == 0) { 
-			printf("fwd lifting then inv lifting step\n");
-			fwd_inv = tmp;
+	fwd_inv = (short int *)malloc(1);
+	printf("fwd_inv = 0x%x\n",fwd_inv);
+	tmp = atoi(argv[4]);
+	if (tmp == 0) 
+	{ 
+			
+		*fwd_inv = (short int) tmp;
+		printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
 	}
-	else if (tmp == 1) {
-			printf("fwd lifting step only\n");
-			fwd_inv = tmp;
+	else if (tmp == 1) 
+	{
+			
+		*fwd_inv = (short int) tmp;
+		printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
 	}
 
-	
-	buf = ( char *)malloc(sizeof( int)* ptrs.w*ptrs.h*2);
+	buf = ( char *)malloc(sizeof( char)* ptrs.w*ptrs.h);
 	printf("buf = 0x%x\n",buf);
-	ptrs.inpbuf = buf;
-	printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
-	fwd_inv = (int *)malloc(1);
-	printf("fwd_inv = 0x%x\n",fwd_inv);
+	
+	ptrs.inpbuf = ( short int *)malloc(sizeof( short int)* ptrs.w*ptrs.h*2);
+	printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf);
+	//ptrs.inpbuf = buf;
+	//printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
+	
 	 
+	//loop = ptrs.w*ptrs.h;
+    	//for(i=0;i<loop;i++)	
 	printf("reading \n");
-	ptrs.flag = tmp;
-	inptr = fopen(argv[3],"rb");
-	if (!inptr)
+	ptrs.flag = tmp; 
+	inptr = fopen(fname,"rb");
+	printf("inptr %d \n",inptr);
+	if(!inptr)
 	{
-		printf("Unle to open file!");
+		printf("Unable to open file!");
 		return 1;
 	}
 	else 
 	{
-		fread(ptrs.inpbuf,sizeof(char),4096,inptr);
- 
-		fclose(inptr);
+		
+		loop = fread(buf,sizeof(char),ptrs.w*ptrs.h,inptr);
+        	printf("number of char %d\n",loop);
+		//fclose(inptr);
 
 	}
-	loop = 16;
-  for(i=0;i<loop;i++)
-  {
-		printf("0x%x \n",*ptrs.inpbuf);
+
+    { 
+		*ptrs.inpbuf = *buf;
+		printf("0x%x 0x%x\n",*buf,*ptrs.inpbuf);
+		buf++;
 		ptrs.inpbuf++;
-  }
-  ptrs.inpbuf = ptrs.inpbuf - loop;
-  printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
-  wptr = ptrs.inpbuf;
+    }
+    free(buf);
+    //buf = buf - loop;
+    ptrs.inpbuf = ptrs.inpbuf - loop;
+    printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
+    wptr = (short int)ptrs.inpbuf;
 	printf("wptr = 0x%x\n",wptr);
 	ptrs.alt = &buf[ptrs.w*ptrs.h];
 	printf("ptrs.alt = 0x%x\n",ptrs.alt);
 	printf("starting dwt\n");
   
 	lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
-	printf("finished ted dwt\n");
+	printf("finished dwt\n");
 		//pack(ptrs.flag, i,buf_red, ptrs.inpbuf);
 	
     outptr = fopen("dwt.bin","wb");
-  if (!outptr)
+	if (!outptr)
 	{
- 	printf("Unle to open file!");
-	return 1;
+		printf("Unle to open file!");
+		return 1;
 	}
-	fwrite(ptrs.inpbuf,sizeof( char),4096,outptr);
-	//fwrite(alt,sizeof( int),65536,outptr);
+	else fwrite(ptrs.inpbuf,sizeof( char),ptrs.w*ptrs.h,outptr);
+	//fwrite(alt,sizeof( short int),65536,outptr);
 	fclose(outptr);
-  
+	 
+	free(ptrs.inpbuf);
 	return 0;
 
 }
