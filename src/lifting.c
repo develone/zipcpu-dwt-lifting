@@ -43,12 +43,12 @@
 //
 #include "lifting.h"
 #include <stdio.h>
-void	singlelift(short int rb, short int w, short int* const ibuf, short int* const obuf) {
-	short int	col, row;
+void	singlelift(int rb, int w, int * const ibuf, int * const obuf) {
+	int	col, row;
 	//printf("in singlelift \n");
 	for(row=0; row<w; row++) {
-		register short int	*ip, *op, *opb;
-		register short int	ap,b,cp,d;
+		register int	*ip, *op, *opb;
+		register int	ap,b,cp,d;
 
 		//
 		// Ibuf walks down rows (here), but reads across columns (below)
@@ -110,12 +110,12 @@ void	singlelift(short int rb, short int w, short int* const ibuf, short int* con
 	}
 }
 
-void	ilift(short int rb, short int w,  short int* const ibuf,  short int* const obuf) {
-	short int	col, row;
+void	ilift(int rb, int w,  int * const ibuf,  int * const obuf) {
+	int	col, row;
 
 	for(row=0; row<w; row++) {
-		register short int	*ip, *ipb, *op;
-		register short int	b,c,d,e;
+		register int	*ip, *ipb, *op;
+		register int	b,c,d,e;
 
 		//
 		// Ibuf walks down rows (here), but reads across columns (below)
@@ -172,15 +172,15 @@ void	ilift(short int rb, short int w,  short int* const ibuf,  short int* const 
 	}
 }
 
-void	lifting(short int w, short int *ibuf, short int *tmpbuf, short int *fwd) {
-	const	short int	rb = w;
-	short int	lvl;
+void	lifting(int w, int *ibuf, int *tmpbuf, int *fwd) {
+	const	int	rb = w;
+	int	lvl;
 
-	short int	*ip = ibuf, *tp = tmpbuf, *test_fwd = fwd;
+	int	*ip = ibuf, *tp = tmpbuf, *test_fwd = fwd;
 	printf("ip = 0x%x tp = 0x%x \n",ip,tp);
-	short int	ov[3];
+	int	ov[3];
 
-	const short int	LVLS = 3;
+	const int	LVLS = 3;
 
 /*
 	for(lvl=0; lvl<w*w; lvl++)

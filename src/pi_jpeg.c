@@ -16,13 +16,13 @@
  * ./pi_jpeg 2 1 or ./pi_jpeg 2 0
  */
 struct PTRs {
-	char *inpbuf;
+	 int *inpbuf;
 	 
-	short int flag;
-	short int w;
-	short int h;
-	short int *alt;
-	//short int *fwd_inv;
+	 int flag;
+	 int w;
+	 int h;
+	 int *alt;
+	// int *fwd_inv;
 } ptrs;
 
 char *fff;
@@ -30,50 +30,35 @@ int main(int argc, char *argv[]) {
 	
 	FILE *inptr,*outptr;
 	  char *ch;
-	  short int tmp,loop;
+	   int tmp,loop;
 	 
-	 short int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
-	 short int *wptr,*wptr1,*wptr2;
-	 short int *alt,*alt1,*alt2;
+	  int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
+	  int *wptr,*wptr1,*wptr2;
+	  int *alt,*alt1,*alt2;
 	
 	 
-	 char *buf;
-	 short int ur,ug,ub,x,y,z;
-	short int *fwd_inv;	
+	 char *buf1,buf2;
+	  int n1 = 4096;
+	 int n2 = 65536, size;
+	  int ur,ug,ub,x,y,z;
+	 int *fwd_inv;	
 
-	short int i,j;
+	 int i,j;
 	
 	 
 
-	ptrs.w = atoi(argv[1]);
-	ptrs.h = atoi(argv[2]);
+	ptrs.w = ( int) atoi(argv[1]);
+	ptrs.h = ( int) atoi(argv[2]);
+	size = ptrs.w*ptrs.h*2;
 	//ch = argv[3];
-	printf("ptrs.w %d ptrs.h %d \n",ptrs.w,ptrs.h);
+	printf("ptrs.w %d ptrs.h %d size %d \n",ptrs.w,ptrs.h,size);
     printf("fname %s \n",argv[3]);
 		//strncpy(fff, argv[3], sizeof(fff) - 1);
     //printf("address of fname 0x%x \n", &fff);
     
     //return 0;
-	fwd_inv = (short int *)malloc(1);
-	printf("fwd_inv = 0x%x\n",fwd_inv);
-	tmp = atoi(argv[4]);
-	if (tmp == 0) 
-	{ 
-			
-		*fwd_inv = (short int) tmp;
-		printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
-	}
-	else if (tmp == 1) 
-	{
-			
-		*fwd_inv = (short int) tmp;
-		printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
-	}
-
-	buf = ( char *)malloc(sizeof( char)* ptrs.w*ptrs.h);
-	printf("buf = 0x%x\n",buf);
-	
-	ptrs.inpbuf = ( short int *)malloc(sizeof( short int)* ptrs.w*ptrs.h*2);
+    buf1 = ( char *)malloc(size);
+	ptrs.inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
 	printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf);
 	//ptrs.inpbuf = buf;
 	//printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
@@ -83,7 +68,7 @@ int main(int argc, char *argv[]) {
     	//for(i=0;i<loop;i++)	
 	printf("reading \n");
 	ptrs.flag = tmp; 
-	inptr = fopen(fname,"rb");
+	inptr = fopen(argv[3],"rb");
 	printf("inptr %d \n",inptr);
 	if(!inptr)
 	{
@@ -92,29 +77,57 @@ int main(int argc, char *argv[]) {
 	}
 	else 
 	{
-		
-		loop = fread(buf,sizeof(char),ptrs.w*ptrs.h,inptr);
-        	printf("number of char %d\n",loop);
-		//fclose(inptr);
+		printf("number to be  read %d sizeof(*buf1) 0x%x\n",size,sizeof(*buf1));
+		n1 = fread(buf1,sizeof(*buf1),size,inptr);
+        printf("number of char read %d\n",n1);
 
 	}
-
-    { 
-		*ptrs.inpbuf = *buf;
-		printf("0x%x 0x%x\n",*buf,*ptrs.inpbuf);
-		buf++;
+	for(i=0;i<n1;i++)
+	{
+		printf("0x%x ",*buf1);
+		buf1++;
+	}
+	buf1 = buf1 -n1;
+	printf("\n");
+	fwd_inv = ( int *)malloc(1);
+	printf("fwd_inv = 0x%x\n",fwd_inv);
+	tmp = ( int) atoi(argv[4]);
+	if (tmp == 0) 
+	{ 
+			
+		*fwd_inv = ( int) tmp;
+		printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
+	}
+	else if (tmp == 1) 
+	{
+			
+		*fwd_inv = ( int) tmp;
+		printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
+	}
+	
+	//n2= (ptrs.w*ptrs.h);
+	//printf("number to be read %d \n", n2);
+	//buf2 = ( char *)malloc(sizeof( n1 ));
+	//printf("buf = 0x%x %d\n",buf,*buf1);
+	size = size-ptrs.w*ptrs.h;
+	for(i=0;i<size-ptrs.w*ptrs.h;i++)
+	{
+		*ptrs.inpbuf = *buf1;
+		printf("0x%x 0x%x\n",*buf1,*ptrs.inpbuf);
+		buf1++;
 		ptrs.inpbuf++;
     }
-    free(buf);
-    //buf = buf - loop;
-    ptrs.inpbuf = ptrs.inpbuf - loop;
-    printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
-    wptr = (short int)ptrs.inpbuf;
+	
+    ptrs.inpbuf = ptrs.inpbuf - ( int)size;
+    printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf);
+    
+    //wptr = ( int)ptrs.inpbuf;
+    wptr = buf1;
 	printf("wptr = 0x%x\n",wptr);
-	ptrs.alt = &buf[ptrs.w*ptrs.h];
+	ptrs.alt = &buf1[ptrs.w*ptrs.h];
 	printf("ptrs.alt = 0x%x\n",ptrs.alt);
 	printf("starting dwt\n");
-  
+    
 	lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
 	printf("finished dwt\n");
 		//pack(ptrs.flag, i,buf_red, ptrs.inpbuf);
@@ -126,10 +139,11 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 	else fwrite(ptrs.inpbuf,sizeof( char),ptrs.w*ptrs.h,outptr);
-	//fwrite(alt,sizeof( short int),65536,outptr);
+	//fwrite(alt,sizeof(  int),65536,outptr);
 	fclose(outptr);
 	 
-	free(ptrs.inpbuf);
+	//free(buf);
+	
 	return 0;
 
 }
