@@ -180,7 +180,7 @@ void	lifting(int w, int *ibuf, int *tmpbuf, int *fwd) {
 	printf("ip = 0x%x tp = 0x%x \n",ip,tp);
 	int	ov[3];
 
-	const int	LVLS = 3;
+	const int	LVLS = 1;
 
 /*
 	for(lvl=0; lvl<w*w; lvl++)
