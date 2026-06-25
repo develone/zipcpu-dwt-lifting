@@ -1,0 +1,44 @@
+06/25/26
+(gdb) file pi_jpeg 
+Reading symbols from pi_jpeg...
+(gdb) break 139
+Breakpoint 1 at 0xea8: file pi_jpeg.c, line 139.
+(gdb) start 64 64 red-64 1
+Temporary breakpoint 2 at 0x9e4: file pi_jpeg.c, line 41.
+Starting program: /home/devel/zipcpu-dwt-lifting/host/pi_jpeg 64 64 red-64 1
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/aarch64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=5, argv=0x7ffffff0f8) at pi_jpeg.c:41
+41                int n1 = 4096;
+(gdb) c
+Continuing.
+ptrs.w 64 ptrs.h 64 malloc of ptrs.inpbuf 8192 
+fname red-64 
+ptrs.inpbuf = 0x555726c0
+reading 
+inptr 1431783120 
+size 8192 sizeof(buf1) 0x8
+number of char read 4096
+fwd_inv = 0x555758c0
+fwd lifting step only 0x1 *fwd_inv 1431787712 
+starting transfer between buf1 and ptrs.inpbuf 
+i 0 0x96 0x96 i 1 0x6c 0x6c i 2 0x6c 0x6c i 3 0x72 0x72
+
+i 4086 0xea 0xea i 4087 0xeb 0xeb i 4088 0xe9 0xe9 i 4089 0xe6 0xe6 i 4090 0xe4 0xe4 i 4091 0xe2 0xe2 i 4092 0xe2 0xe2 i 4093 0xe1 0xe1 i 4094 0xe0 0xe0 i 4095 0xe0 0xe0
+ptrs.inpbuf = 0x555726c0
+wptr = 0x555726c0
+ptrs.inpbuf = 0x555726c0
+ptrs.alt = 0x5557a6c0
+starting dwt
+
+Breakpoint 1, main (argc=5, argv=0x7ffffff0f8) at pi_jpeg.c:139
+139             lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
+(gdb) n 1
+ip = 0x555726c0 tp = 0x5557a6c0 
+in lifting 
+ip = 0x555726c0 op = 0x5557a6c0 opb = 0x5557c6c0
+
+Program received signal SIGSEGV, Segmentation fault.
+singlelift (rb=64, w=64, ibuf=0x555726c0, obuf=0x555557a6c0) at lifting.c:78
+78                      ap = ip[0]
