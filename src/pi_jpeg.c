@@ -16,7 +16,7 @@
  * ./pi_jpeg 2 1 or ./pi_jpeg 2 0
  */
 struct PTRs {
-	 int *inpbuf;
+	 int inpbuf[8192];
 	 
 	 int flag;
 	 int w;
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	 
 	  int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
 	  int *wptr,*wptr1,*wptr2;
-	  int *alt,*alt1,*alt2;
+	  int *alt,*alt1,*alt2, *inpbuf;
 	
 	 
 	 char *buf1,buf2;
@@ -61,8 +61,10 @@ int main(int argc, char *argv[]) {
      *Reads char data from argv[3] buf1 points to char data which is read in first half ptrs,inpbuf
     */ 
     buf1 = ( char *)malloc(ptrs.w*ptrs.h);
-	ptrs.inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
-	printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf);
+    buf2 = buf1;
+	inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
+    
+	printf("ptrs.inpbuf = 0x%x\n",inpbuf);
 	//ptrs.inpbuf = buf;
 	//printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
 	
@@ -116,24 +118,27 @@ int main(int argc, char *argv[]) {
 	printf("starting transfer between buf1 and ptrs.inpbuf \n");
 	for(i=0;i<ptrs.w*ptrs.h;i++)
 	{
-		*ptrs.inpbuf = *buf1;
+		ptrs.inpbuf[i] = *buf1;
 		//printf("i %d 0x%x 0x%x\n",i,*buf1,*ptrs.inpbuf);
-		printf("i %d 0x%x 0x%x ",i,*buf1,*ptrs.inpbuf);
+		//printf("i %d 0x%x 0x%x ",i,*buf1,*inpbuf);
+		printf("i %d 0x%x 0x%x ",i,*buf1,ptrs.inpbuf[i]);
 		buf1++;
-		ptrs.inpbuf++;
+		//inpbuf++;
     }
 	printf("\n");
-    ptrs.inpbuf = ptrs.inpbuf - ptrs.w*ptrs.h;
-    printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf);
+    //inpbuf = inpbuf - ptrs.w*ptrs.h;
+    printf("&ptrs.inpbuf[0] = 0x%x\n",&ptrs.inpbuf[0] );
     
-    wptr = ( int)ptrs.inpbuf;
+    //wptr = ( int)inpbuf;
+    wptr = &ptrs.inpbuf[0];
     //wptr = buf1;
     //wptr = ptrs.inpbuf;
 	printf("wptr = 0x%x\n",wptr);
-	printf("ptrs.inpbuf = 0x%x\n",ptrs.inpbuf); 
+	printf("ptrs.inpbuf = 0x%x\n",inpbuf); 
 	//ptrs.alt = ptrs.w*ptrs.h*2;
-	ptrs.alt = ptrs.inpbuf + ptrs.w*ptrs.h*2;
-	printf("ptrs.alt = 0x%x\n",ptrs.alt);
+	//ptrs.alt = inpbuf + ptrs.w*ptrs.h*2;
+	ptrs.alt = &ptrs.inpbuf[ptrs.w*ptrs.h];
+	printf("ptrs.alt = 0x%x\n",&ptrs.inpbuf[ptrs.w*ptrs.h]);
 	printf("starting dwt\n");
     
 	lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
@@ -141,17 +146,17 @@ int main(int argc, char *argv[]) {
 	//size = size-ptrs.w*ptrs.h;
 	
 	//for(i=0;i<4095;i++)
-	for(i=0;i<ptrs.w*ptrs.h;i++)
+	for(i=0;i<4096;i++)
 	{
 		//*ptrs.inpbuf = *buf1;
-		printf("i %d 0x%x \n",i,*ptrs.inpbuf);
+		printf("i %d 0x%x \n",i,ptrs.inpbuf[i]);
 		//buf1++;
-		ptrs.inpbuf++;
+		//inpbuf++;
     }
     //ptrs.inpbuf = ptrs.inpbuf - 4095;
-    ptrs.inpbuf = ptrs.inpbuf - ptrs.w*ptrs.h;
+    //inpbuf = inpbuf - ptrs.w*ptrs.h;
     
-    printf("i %d 0x%x %d\n",i,*ptrs.inpbuf,sizeof(ptrs.inpbuf));
+    //printf("i %d 0x%x %d\n",i,*ptrs.inpbuf,sizeof(ptrs.inpbuf));
 		//pack(ptrs.flag, i,buf_red, ptrs.inpbuf);
 	
     outptr = fopen("dwt.bin","wb");
