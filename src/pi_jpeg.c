@@ -167,7 +167,9 @@ int main(int argc, char *argv[]) {
 	}
 	//else fwrite(wptr,sizeof( int),4096,outptr);
 	else 
-	{	fwrite(ptrs.inpbuf, sizeof(ptrs.inpbuf),1,outptr);
+	{	
+		//fwrite(ptrs.inpbuf, sizeof(ptrs.inpbuf),1,outptr);
+		fwrite(wptr,sizeof( int),4096,outptr);
 		//fwrite(alt,sizeof(  int),65536,outptr);
 		fclose(outptr);
 	}
