@@ -4,17 +4,7 @@
 #include <string.h>
  
 #include "lifting.h"
-/* First parameter is used to tell the program which sub band to use 
- * 0 Red
- * 1 Green
- * 2 Blue
- * 2nd parameter is used to tell the program to compute the fwd lifting step only or fwd lifting then inv lifting step
- * 0 fwd lifting then inv lifting step
- * 1 fwd lifting step only
- * ./pi_jpeg 0 1 or ./pi_jpeg 0 0
- * ./pi_jpeg 1 1 or ./pi_jpeg 1 0
- * ./pi_jpeg 2 1 or ./pi_jpeg 2 0
- */
+
 struct PTRs {
 	 int inpbuf[8192];
 	 
@@ -50,13 +40,10 @@ int main(int argc, char *argv[]) {
 	ptrs.w = ( int) atoi(argv[1]);
 	ptrs.h = ( int) atoi(argv[2]);
 	size = ptrs.w*ptrs.h*2;
-	//ch = argv[3];
+	
 	printf("ptrs.w %d ptrs.h %d malloc of ptrs.inpbuf %d \n",ptrs.w,ptrs.h,size);
     printf("fname %s \n",argv[3]);
-		//strncpy(fff, argv[3], sizeof(fff) - 1);
-    //printf("address of fname 0x%x \n", &fff);
-    
-    //return 0;
+
     /*
      *Reads char data from argv[3] buf1 points to char data which is read in first half ptrs,inpbuf
     */ 
@@ -65,12 +52,7 @@ int main(int argc, char *argv[]) {
 	inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
     
 	printf("ptrs.inpbuf = 0x%x\n",inpbuf);
-	//ptrs.inpbuf = buf;
-	//printf("ptrs.buf = 0x%x\n",ptrs.inpbuf);
 	
-	 
-	//loop = ptrs.w*ptrs.h;
-    	//for(i=0;i<loop;i++)	
 	printf("reading \n");
 	ptrs.flag = tmp; 
 	inptr = fopen(argv[3],"rb");
@@ -85,6 +67,7 @@ int main(int argc, char *argv[]) {
 		printf("size %d sizeof(buf1) 0x%x\n",size,sizeof(buf1));
 		n1 = fread(buf1,sizeof(*buf1),size/2,inptr);
         printf("number of char read %d\n",n1);
+        fclose(inptr);
 
 	}
 	for(i=0;i<n1;i++)
@@ -110,54 +93,42 @@ int main(int argc, char *argv[]) {
 		printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
 	}
 	
-	//n2= (ptrs.w*ptrs.h);
-	//printf("number to be read %d \n", n2);
-	//buf2 = ( char *)malloc(sizeof( n1 ));
-	//printf("buf = 0x%x %d\n",buf,*buf1);
-	//size = size-ptrs.w*ptrs.h;
+	
 	printf("starting transfer between buf1 and ptrs.inpbuf \n");
 	for(i=0;i<ptrs.w*ptrs.h;i++)
 	{
 		ptrs.inpbuf[i] = *buf1;
-		//printf("i %d 0x%x 0x%x\n",i,*buf1,*ptrs.inpbuf);
-		//printf("i %d 0x%x 0x%x ",i,*buf1,*inpbuf);
+		
 		printf("i %d 0x%x 0x%x ",i,*buf1,ptrs.inpbuf[i]);
 		buf1++;
-		//inpbuf++;
+		
     }
 	printf("\n");
-    //inpbuf = inpbuf - ptrs.w*ptrs.h;
+    
     printf("&ptrs.inpbuf[0] = 0x%x\n",&ptrs.inpbuf[0] );
     
-    //wptr = ( int)inpbuf;
+    
     wptr = &ptrs.inpbuf[0];
-    //wptr = buf1;
-    //wptr = ptrs.inpbuf;
+    
 	printf("wptr = 0x%x\n",wptr);
 	printf("ptrs.inpbuf = 0x%x\n",inpbuf); 
-	//ptrs.alt = ptrs.w*ptrs.h*2;
-	//ptrs.alt = inpbuf + ptrs.w*ptrs.h*2;
+	
 	ptrs.alt = &ptrs.inpbuf[ptrs.w*ptrs.h];
 	printf("ptrs.alt = 0x%x\n",&ptrs.inpbuf[ptrs.w*ptrs.h]);
 	printf("starting dwt\n");
     
 	lifting(ptrs.w,wptr,ptrs.alt,fwd_inv);
 	printf("finished dwt\n");
-	//size = size-ptrs.w*ptrs.h;
 	
-	//for(i=0;i<4095;i++)
+	
+	
 	for(i=0;i<4096;i++)
 	{
-		//*ptrs.inpbuf = *buf1;
+		
 		printf("i %d 0x%x \n",i,ptrs.inpbuf[i]);
-		//buf1++;
-		//inpbuf++;
+		
     }
-    //ptrs.inpbuf = ptrs.inpbuf - 4095;
-    //inpbuf = inpbuf - ptrs.w*ptrs.h;
-    
-    //printf("i %d 0x%x %d\n",i,*ptrs.inpbuf,sizeof(ptrs.inpbuf));
-		//pack(ptrs.flag, i,buf_red, ptrs.inpbuf);
+
 	
     outptr = fopen("dwt.bin","wb");
 	if (!outptr)
@@ -165,12 +136,12 @@ int main(int argc, char *argv[]) {
 		printf("Unle to open file!");
 		return 1;
 	}
-	//else fwrite(wptr,sizeof( int),4096,outptr);
+	
 	else 
 	{	
-		//fwrite(ptrs.inpbuf, sizeof(ptrs.inpbuf),1,outptr);
+		
 		fwrite(wptr,sizeof( int),4096,outptr);
-		//fwrite(alt,sizeof(  int),65536,outptr);
+		
 		fclose(outptr);
 	}
 	//free(buf1);
