@@ -4,6 +4,7 @@
 #include <string.h>
  
 #include "lifting.h"
+#include "pnmio.h"
 
 struct PTRs {
 	 int inpbuf[8192];
@@ -21,7 +22,9 @@ int main(int argc, char *argv[]) {
 	FILE *inptr,*outptr;
 	  char *ch;
 	   int tmp,loop;
-	 
+	 unsigned char *img1;
+	 int ncols, nrows;
+	 img1 = pgmReadFile("lena_rgb_64.pgm", NULL, &ncols, &nrows);
 	  int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
 	  int *wptr,*wptr1,*wptr2;
 	  int *alt,*alt1,*alt2, *inpbuf;
@@ -54,7 +57,8 @@ int main(int argc, char *argv[]) {
 	printf("ptrs.inpbuf = 0x%x\n",inpbuf);
 	
 	printf("reading \n");
-	ptrs.flag = tmp; 
+	ptrs.flag = tmp;
+	/* 
 	inptr = fopen(argv[3],"rb");
 	printf("inptr %d \n",inptr);
 	if(!inptr)
@@ -77,6 +81,7 @@ int main(int argc, char *argv[]) {
 	}
 	buf1 = buf1 -n1;
 	printf("\n");
+	*/
 	fwd_inv = ( int *)malloc(1);
 	printf("fwd_inv = 0x%x\n",fwd_inv);
 	tmp = ( int) atoi(argv[4]);
@@ -97,10 +102,10 @@ int main(int argc, char *argv[]) {
 	printf("starting transfer between buf1 and ptrs.inpbuf \n");
 	for(i=0;i<ptrs.w*ptrs.h;i++)
 	{
-		ptrs.inpbuf[i] = *buf1;
+		ptrs.inpbuf[i] = *img1;
 		
 		printf("i %d 0x%x 0x%x ",i,*buf1,ptrs.inpbuf[i]);
-		buf1++;
+		img1++;
 		
     }
 	printf("\n");
