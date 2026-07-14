@@ -6,15 +6,15 @@
 #include "lifting.h"
 #include "pnmio.h"
 
-struct PTRs {
-	 int inpbuf[8192];
+		struct PTRs {
+			short int inpbuf[131072];
 	 
-	 int flag;
-	 int w;
-	 int h;
-	 int *alt;
-	// int *fwd_inv;
-} ptrs;
+			int flag;
+			short int w;
+			short int h;
+			short int *alt;
+			// int *fwd_inv;
+		}ptrs;
 
 char *fff;
 int main(int argc, char *argv[]) {
@@ -24,80 +24,111 @@ int main(int argc, char *argv[]) {
 	   int tmp,loop;
 	 unsigned char *img1;
 	 int ncols, nrows;
-	 img1 = pgmReadFile("lena_rgb_64.pgm", NULL, &ncols, &nrows);
+	 
 	  int *red_s_ptr, *gr_s_ptr, *bl_s_ptr;
-	  int *wptr,*wptr1,*wptr2;
-	  int *alt,*alt1,*alt2, *inpbuf;
+	  short int *wptr,*wptr1,*wptr2;
+	  short int *alt,*alt1,*alt2, *inpbuf;
 	
 	 
 	 char *buf1,buf2;
-	  int n1 = 4096;
-	 int n2 = 65536, size;
+	 int n1;
+	 int  size;
 	  int ur,ug,ub,x,y,z;
-	 int *fwd_inv;	
+	 short int *fwd_inv;	
+	 short int *decomp;
 
 	 int i,j;
 	
 	 
 
-	ptrs.w = ( int) atoi(argv[1]);
-	ptrs.h = ( int) atoi(argv[2]);
-	size = ptrs.w*ptrs.h*2;
-	
-	printf("ptrs.w %d ptrs.h %d malloc of ptrs.inpbuf %d \n",ptrs.w,ptrs.h,size);
-    printf("fname %s \n",argv[3]);
 
-    /*
-     *Reads char data from argv[3] buf1 points to char data which is read in first half ptrs,inpbuf
-    */ 
-    buf1 = ( char *)malloc(ptrs.w*ptrs.h);
-    buf2 = buf1;
-	inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
+	if (argc > 2) 
+	{
+		
+		printf("argc %d \n",argc);
+
+		
+		ptrs.w = (int) atoi(argv[3]);
+		ptrs.h = (int) atoi(argv[4]);
+		//decomp = (short int)atoi(argv[5]);
+		//printf("decomp  %d *fwd_inv 0x%x \n",*decomp,decomp);
+		size = ptrs.w*ptrs.h*2;
+		
+		img1 = pgmReadFile(argv[1], NULL, &ncols, &nrows);
+		printf("ptrs.w %d ptrs.h %d malloc of ptrs.inpbuf %d \n",ptrs.w,ptrs.h,size);
+		printf("fname %s \n",argv[1]);	
+		
+		/*
+		*Reads char data from argv[1] buf1 points to char data which is read in first half ptrs,inpbuf
+		*/ 
+		buf1 = ( char *)malloc(ptrs.w*ptrs.h);
+		buf2 = buf1;
+		inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
     
-	printf("ptrs.inpbuf = 0x%x\n",inpbuf);
+		printf("ptrs.inpbuf = 0x%x\n",inpbuf);
 	
-	printf("reading \n");
-	ptrs.flag = tmp;
-	/* 
-	inptr = fopen(argv[3],"rb");
-	printf("inptr %d \n",inptr);
-	if(!inptr)
+		printf("reading \n");
+		ptrs.flag = tmp;
+		fwd_inv = ( short int *)malloc(1);
+		//*decomp = ( short int *)malloc(1);
+		printf("fwd_inv = 0x%x\n",fwd_inv);
+		tmp = ( int) atoi(argv[2]);
+		if (tmp == 0) 
+		{ 
+			
+			*fwd_inv = ( int) tmp;
+			printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
+		}
+		else if (tmp == 1) 
+		{
+			
+			*fwd_inv = ( int) tmp;
+			printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
+		}	
+	}else 
 	{
-		printf("Unable to open file!");
-		return 1;
-	}
-	else 
-	{
-		printf("size %d sizeof(buf1) 0x%x\n",size,sizeof(buf1));
-		n1 = fread(buf1,sizeof(*buf1),size/2,inptr);
-        printf("number of char read %d\n",n1);
-        fclose(inptr);
+		printf("argc %d \n",argc);
+		ptrs.w = (int) atoi(argv[3]);
+		ptrs.h = (int) atoi(argv[4]);
+		//*decomp = (short int)atoi(argv[5]);
+		//printf("decomp  %d *fwd_inv 0x%x \n",*decomp,decomp);
+		size = ptrs.w*ptrs.h*2;
+		img1 = pgmReadFile(argv[1], NULL, &ncols, &nrows);
+		printf("ptrs.w %d ptrs.h %d malloc of ptrs.inpbuf %d \n",ptrs.w,ptrs.h,size);
+		printf("fname %s \n",argv[1]);
+	
+	
+	
 
-	}
-	for(i=0;i<n1;i++)
-	{
-		printf("i %d 0x%x ",i,*buf1);
-		buf1++;
-	}
-	buf1 = buf1 -n1;
-	printf("\n");
-	*/
-	fwd_inv = ( int *)malloc(1);
-	printf("fwd_inv = 0x%x\n",fwd_inv);
-	tmp = ( int) atoi(argv[4]);
-	if (tmp == 0) 
-	{ 
-			
-		*fwd_inv = ( int) tmp;
-		printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
-	}
-	else if (tmp == 1) 
-	{
-			
-		*fwd_inv = ( int) tmp;
-		printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
-	}
+
+		/*
+		*Reads char data from argv[1] buf1 points to char data which is read in first half ptrs,inpbuf
+		*/ 
+		buf1 = ( char *)malloc(ptrs.w*ptrs.h);
+		buf2 = buf1;
+		inpbuf = (  int *)malloc(ptrs.w*ptrs.h*2);
+    
+		printf("ptrs.inpbuf = 0x%x\n",inpbuf);
 	
+		printf("reading \n");
+		ptrs.flag = tmp;
+		fwd_inv = ( int *)malloc(1);
+		decomp = ( short int *)malloc(1);
+		printf("fwd_inv = 0x%x\n",fwd_inv);
+		tmp = ( int) atoi(argv[2]);
+		if (tmp == 0) 
+		{ 
+			
+			*fwd_inv = ( int) tmp;
+			printf("fwd lifting then inv lifting step  %d *fwd_inv 0x%x \n",*fwd_inv,fwd_inv);
+		}
+		else if (tmp == 1) 
+		{
+			
+			*fwd_inv = ( int) tmp;
+			printf("fwd lifting step only 0x%x *fwd_inv %d \n",*fwd_inv,fwd_inv);
+		}
+	}
 	
 	printf("starting transfer between buf1 and ptrs.inpbuf \n");
 	for(i=0;i<ptrs.w*ptrs.h;i++)
@@ -127,10 +158,10 @@ int main(int argc, char *argv[]) {
 	
 	
 	
-	for(i=0;i<4096;i++)
+	for(i=0;i<ptrs.w*ptrs.h;i++)
 	{
 		
-		printf("i %d 0x%x \n",i,ptrs.inpbuf[i]);
+		printf("i %d 0x%4hx \n",i,ptrs.inpbuf[i]);
 		
     }
 
@@ -145,7 +176,7 @@ int main(int argc, char *argv[]) {
 	else 
 	{	
 		
-		fwrite(wptr,sizeof( int),4096,outptr);
+		fwrite(wptr,sizeof(short int),ptrs.w*ptrs.h,outptr);
 		
 		fclose(outptr);
 	}
